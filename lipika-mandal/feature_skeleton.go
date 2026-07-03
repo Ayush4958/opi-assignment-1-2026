@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"time"
 
+	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 )
@@ -40,6 +41,7 @@ type NvidiaDpfTranslationEngine struct {
 	AdapterNamespace string
 }
 
+// GenerateValidDpfYaml builds a fully valid, machine-readable Kubernetes YAML block with a corrected group layout
 func (e *NvidiaDpfTranslationEngine) GenerateValidDpfYaml(config DpuOperatorConfig, bfbUrl string, chartName string, flavour string, fsMode string) string {
 	return fmt.Sprintf(`apiVersion: ://nvidia.com
 kind: DPUService
@@ -59,42 +61,38 @@ func (e *NvidiaDpfTranslationEngine) ReconcileNvidiaNode(ctx context.Context, co
 	fmt.Printf("[OPI Engine] Syncing DpuOperatorConfig Instance: %s via Controller-Runtime Stream\n", config.Name)
 	var reconcileErrors []componentError
 
-	// Structural Edge Case Handling: Trap immutable hardware constraints using reconcile.TerminalError natively
 	if secureBootMismatched {
 		err := reconcile.TerminalError(errors.New("terminal hardware security mismatch: manual intervention required"))
 		reconcileErrors = append(reconcileErrors, componentError{component: "NvidiaSecureBoot", err: err})
 		return reconcile.Result{}, reconcileErrors
 	}
-    if bfbUrl == "" || chartName == "" {
+
+	if bfbUrl == "" || chartName == "" {
 		err := errors.New("target BlueField Bundle URL and Helm Chart parameters cannot be empty")
 		reconcileErrors = append(reconcileErrors, componentError{component: "NvidiaTranslation", err: err})
 		return reconcile.Result{}, reconcileErrors
 	}
 
-	dpfPayload, err := e.GenerateValidDpfYaml(*config, bfbUrl, chartName, flavour, fsMode)
-	if err != nil {
-		reconcileErrors = append(reconcileErrors, componentError{component: "NvidiaTranslation", err: err})
-		return reconcile.Result{}, reconcileErrors
-	}
-
-	fmt.Printf("[NVIDIA Adapter Engine] Emitted Discovered Environment Workspace Payload: %s\n", dpfPayload)
+ 	dpfPayload := e.GenerateValidDpfYaml(*config, bfbUrl, chartName, flavour, fsMode)
+	fmt.Printf("[NVIDIA Adapter Engine] Emitted Discovered Environment Workspace Payload:\n%s\n", dpfPayload)
+	
 	return reconcile.Result{}, nil
 }
 
-// updateStatus simulates the exact OpenShift base status builder routine to prove architectural correctness
+// updateStatus leverages the official meta.SetStatusCondition package to execute upsert/mutation operations safely
 func (e *NvidiaDpfTranslationEngine) updateStatus(config *DpuOperatorConfig, reconcileErrors []componentError) {
 	if len(reconcileErrors) > 0 {
 		firstError := reconcileErrors[0]
 		reasonStr := fmt.Sprintf("%sError", firstError.component)
 		
-    meta.SetStatusCondition(&config.Status.Conditions, metav1.Condition{
+		meta.SetStatusCondition(&config.Status.Conditions, metav1.Condition{
 			Type:               "Ready",
 			Status:             metav1.ConditionFalse,
 			Reason:             reasonStr,
 			Message:            firstError.err.Error(),
 			LastTransitionTime: metav1.NewTime(time.Now()),
 		})
-		fmt.Printf("[OPI Controller Status Logger] Written Status Reason Flag: %s\n", reasonStr)
+		fmt.Printf("[OPI Controller Status Logger] Set Status Condition Reason: %s\n", reasonStr)
 		return
 	}
 
@@ -105,7 +103,7 @@ func (e *NvidiaDpfTranslationEngine) updateStatus(config *DpuOperatorConfig, rec
 		Message:            "All NVIDIA DOCA and OPI components reconciled successfully.",
 		LastTransitionTime: metav1.NewTime(time.Now()),
 	})
-	fmt.Println("[OPI Controller Status Logger] Written Status Reason Flag: ComponentsReady")
+	fmt.Println("[OPI Controller Status Logger] Set Status Condition Reason: ComponentsReady")
 }
 
 func main() {
@@ -119,13 +117,11 @@ func main() {
 	
 	targetBfb := "https://mellanox.com"
 	
-	// Execution Path 1: Simulate structural success route with a discovered cluster environment mapping
 	fmt.Println("--- Running Successful Environmental Discovery Stream ---")
 	res, errs := engine.ReconcileNvidiaNode(context.Background(), mockClusterConfig, targetBfb, "doca-hbn", "OpenShift", "host-trusted", false)
 	engine.updateStatus(mockClusterConfig, errs)
 	fmt.Printf("[Success Loop Result] Zero Value: %t, Total Errors Cached: %d\n\n", res == reconcile.Result{}, len(errs))
 	
-	// Execution Path 2: Simulate structural component error trapping running through updateStatus
 	fmt.Println("--- Running SecureBoot Component Error Trapping Stream ---")
 	mockClusterConfigError := &DpuOperatorConfig{
 		ObjectMeta: metav1.ObjectMeta{Name: "dpu-operator-config-err"},
