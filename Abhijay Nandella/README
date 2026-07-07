@@ -1,0 +1,24 @@
+# OPI Assignment 1 – NVIDIA DPF Integration
+
+## Approach
+
+* Analyzed the **OPI DPU Operator** repository to understand controllers, CRDs, reconciliation flow, runtime components, and vendor abstraction.
+* Analyzed the **OPI API** repository to understand the vendor-neutral API model and architectural boundaries.
+* Analyzed the **NVIDIA DPF Operator** to understand its resource model, controller architecture, lifecycle management, and platform responsibilities.
+* Performed an architectural GAP analysis to compare the three systems and identify similarities, differences, risks, and missing information.
+* Performed an architectural boundary analysis to identify ownership boundaries, controller boundaries, API boundaries, runtime boundaries, and natural interaction points.
+* Explored multiple integration approaches and evaluated each based on Kubernetes best practices, maintainability, extensibility, repository alignment, and long-term sustainability.
+* Reviewed the alternatives from the perspective of an upstream OPI maintainer before selecting the final architecture.
+* Generated the final architecture proposal with diagrams and trade-off analysis.
+* Created a foundational Go skeleton demonstrating the selected architecture without implementing business logic.
+
+## Repository Contents
+
+* **architecture_design.md** – Final architecture proposal.
+* **feature_skeleton.go** – Foundational Go skeleton.
+* **llm_transcript.json** – Complete LLM interaction history.
+
+## Notes
+
+* Repository documentation was treated as the primary source of truth.
+* The Go code is a structural skeleton intended to demonstrate the proposed architecture.
