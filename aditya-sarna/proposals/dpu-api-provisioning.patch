@@ -1,0 +1,49 @@
+# Additive proposal for openshift/dpu-operator dpu-api/api.proto
+# Implements architecture_design.md §7.4a and ADR-005.
+# Backward-compatible: vendors return UNIMPLEMENTED until they opt in.
+#
+# Apply (example):
+#   curl -O https://raw.githubusercontent.com/openshift/dpu-operator/846e112/dpu-api/api.proto
+#   patch api.proto < proposals/dpu-api-provisioning.patch
+
+--- a/dpu-api/api.proto
++++ b/dpu-api/api.proto
+@@ -80,6 +80,34 @@ service HeartbeatService {
+   rpc Ping(PingRequest) returns (PingResponse);
+ }
+ 
++// --- Additive v1 proposal (OPI NVIDIA/DPF integration) ----------------------
++// Optional provisioning surface; Intel/Marvell may leave UNIMPLEMENTED.
++service ProvisioningService {
++  rpc GetProvisioningState(ProvisioningStateRequest) returns (ProvisioningState);
++  rpc EnsureImage(EnsureImageRequest) returns (Empty);
++}
++
++message ProvisioningStateRequest {
++  string dpu_identifier = 1;
++}
++
++message EnsureImageRequest {
++  string dpu_identifier = 1;
++  string image_url      = 2;  // MUST be https + checksum-pinned (SSRF guard)
++  string image_checksum = 3;
++  string flavor         = 4;  // vendor profile hint; NVIDIA -> DPUFlavor
++}
++
++message ProvisioningState {
++  enum Phase {
++    UNKNOWN  = 0;
++    PENDING  = 1;
++    FLASHING = 2;
++    REBOOTING = 3;
++    JOINED   = 4;
++    ERROR    = 5;
++  }
++  Phase  phase  = 1;
++  string reason = 2;
++  string image  = 3;
++}
++
+ message InitRequest {
+   bool dpu_mode = 1;
+   string dpu_identifier = 2;

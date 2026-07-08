@@ -1,0 +1,80 @@
+// OPI Vendor VSP contract (subset aligned with openshift/dpu-operator dpu-api/api.proto).
+// Demo daemon: cmd/vspdaemon — delegates to feature_skeleton.go NvidiaVSP.
+syntax = "proto3";
+
+package opi.vsp.v1;
+
+option go_package = "github.com/adityasarna/opi-nvidia-vsp-skeleton/api/vsp;vsp";
+
+message Empty {}
+
+message InitRequest {
+  bool dpu_mode = 1;
+  string dpu_identifier = 2;
+}
+
+message IpPort {
+  string ip = 1;
+  int32 port = 2;
+}
+
+message VfCount {
+  int32 vf_cnt = 1;
+}
+
+message TopologyInfo {
+  string node = 1;
+}
+
+message Device {
+  string id = 1;
+  string health = 2;
+  TopologyInfo topology = 3;
+}
+
+message DeviceListResponse {
+  map<string, Device> devices = 1;
+}
+
+message NFRequest {
+  string input = 1;
+  string output = 2;
+  string bridge_id = 3;
+}
+
+message DpuNetworkConfigRequest {
+  bool is_accelerated = 1;
+}
+
+message PingRequest {
+  int64 timestamp = 1;
+  string sender_id = 2;
+}
+
+message PingResponse {
+  int64 timestamp = 1;
+  string responder_id = 2;
+  bool healthy = 3;
+}
+
+service LifeCycleService {
+  rpc Init(InitRequest) returns (IpPort);
+}
+
+service DeviceService {
+  rpc GetDevices(Empty) returns (DeviceListResponse);
+  rpc SetNumVfs(VfCount) returns (VfCount);
+}
+
+service NetworkFunctionService {
+  rpc CreateNetworkFunction(NFRequest) returns (Empty);
+  rpc DeleteNetworkFunction(NFRequest) returns (Empty);
+}
+
+service DpuNetworkConfigService {
+  rpc SetDpuNetworkConfig(DpuNetworkConfigRequest) returns (Empty);
+}
+
+service HeartbeatService {
+  rpc Ping(PingRequest) returns (PingResponse);
+}

@@ -1,0 +1,15 @@
+=== BF-3 hardware e2e lane record 2026-07-07T20:11:05Z ===
+
+=== BF-3 lane contract (always) ===
+=== RUN   TestBF3LaneSpec_Complete
+--- PASS: TestBF3LaneSpec_Complete (0.00s)
+PASS
+ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton	0.486s
+
+BF-3 HARDWARE LANE: contract verified; full lab run skipped (set BF3_LAB=1 + KUBECONFIG)
+Lane spec: testdata/hardware/bf3-lane.yaml
+CI job: .github/workflows/verify.yml (integration + kind on Linux runners)
+
+Lane spec: testdata/hardware/bf3-lane.yaml
+Full BF-3 lab execution: BF3_LAB=1 KUBECONFIG=<lab> ./scripts/e2e-bf3-hardware.sh
+CI proof: .github/workflows/verify.yml (Linux: integration + Kind green)

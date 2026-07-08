@@ -1,0 +1,38 @@
+# Pinned DPF bundle manifest — baked into OPI/OLM release artifact (ADR-011).
+# Digests resolved 2026-07-07 via `docker buildx imagetools inspect` against
+# NGC/quay release tags (see scripts/resolve-bundle-digests.sh).
+
+apiVersion: opi.opiproject.org/v1alpha1
+kind: DPFBundleManifest
+metadata:
+  name: nvidia-dpf-v1
+  labels:
+    component: nvidia-vsp
+    installedBy: opi-nvidia-vsp
+spec:
+  packaging: baked-in  # ADR-011: not pull-at-reconcile in v1
+
+  dpf:
+    upstream: github.com/NVIDIA/doca-platform
+    release: v25.7.0
+    commit: 3e0f454ceb038a1a5504b77c0c72b176f5afb8ec  # repo_analysis.md pin
+    profile: scoped-provisioning-service-chain
+    helmChart: oci://nvcr.io/nvidia/doca/charts/dpf-operator:v25.7.0
+
+  images:
+    # Platform-specific amd64 digests for x86 host-cluster lane (§11).
+    operator: nvcr.io/nvidia/doca/dpf-system:v25.7.0@sha256:17a72c7d022dd906e8fe427742e1b6df436eba66f52f5a41f70664e96e273715
+    provisioning: nvcr.io/nvidia/doca/hostdriver:v25.7.0@sha256:99474c7ebd929769e57e5320f66eaf9448f37ca00b3e4c3ee63264cf7d4a881f
+    argocd: quay.io/argoproj/argocd:v2.14.2@sha256:5e754a6a7ed31f5a925fca55ace83f65534c0ec6842b1dff425d8decec70e354
+
+  featureGates:
+    disableHostCNITakeover: true
+    disableTelemetryExporters: true
+
+  fieldManager: opi-nvidia-vsp
+  namespace: opi-nvidia-system
+
+  adoption:
+    detectExisting: true
+    requireExplicitOptIn: true
+    neverUninstallAdopted: true

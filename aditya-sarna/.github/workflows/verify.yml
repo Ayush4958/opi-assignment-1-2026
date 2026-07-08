@@ -1,0 +1,73 @@
+name: verify
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unit-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: Unit + contract + digest
+        run: |
+          chmod +x scripts/*.sh
+          ./scripts/verify.sh
+
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: Integration (envtest)
+        run: |
+          chmod +x scripts/*.sh
+          export KUBEBUILDER_ASSETS="$(./scripts/fetch-envtest.sh)"
+          CGO_ENABLED=0 go test -tags integration -count=1 -v ./...
+
+  kind-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: Install Kind
+        uses: helm/kind-action@v1
+        with:
+          install_only: true
+      - name: Kind e2e
+        run: |
+          chmod +x scripts/*.sh
+          E2E_REQUIRE_KIND=1 ./scripts/e2e-kind.sh
+
+  bf3-lane-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: BF-3 lane contract gate
+        run: |
+          chmod +x scripts/*.sh
+          ./scripts/e2e-bf3-hardware.sh
+
+  grpc-vsp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: gRPC VSP daemon contract
+        run: |
+          chmod +x scripts/*.sh
+          ./scripts/demo-grpc.sh

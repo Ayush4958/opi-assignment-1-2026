@@ -1,0 +1,13 @@
+apiVersion: v2
+name: opi-nf-wrapper
+description: Minimal Helm wrapper — maps OPI NetworkFunction {name,image} to Deployments on DPU nodes (ADR-010)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - opi
+  - dpu
+  - network-function
+maintainers:
+  - name: nvidia-vsp
+    url: https://github.com/opiproject/dpu-operator

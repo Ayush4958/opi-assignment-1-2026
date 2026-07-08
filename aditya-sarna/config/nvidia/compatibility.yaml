@@ -1,0 +1,86 @@
+# NVIDIA VSP compatibility matrix — single source of truth (§13.1).
+# Consumed by: LCM Version-Compatibility Controller (runtime), CI contract gate.
+#
+# On startup and CRD watch events, the LCM discovers served (OPI, DPF) version
+# pairs and selects the matching profile. No match → VersionIncompatible (E12).
+
+apiVersion: opi.opiproject.org/v1alpha1
+kind: CompatibilityMatrix
+metadata:
+  name: nvidia-vsp
+  labels:
+    component: nvidia-vsp
+spec:
+  # OPI operator release this matrix ships with (updated per release PR).
+  opiRelease: "0.0.0-dev"
+
+  profiles:
+    - id: legacy-alpha
+      opi:
+        group: opi.opiproject.org
+        servedVersions: [v1alpha1]
+      dpf:
+        groups:
+          - operator.dpu.nvidia.com
+          - provisioning.dpu.nvidia.com
+          - svc.dpu.nvidia.com
+        servedVersions: [v1alpha1]
+      translator: TranslatorV1Alpha1
+      ci:
+        contractGate: true
+        e2eLane: kind-nvidia-v1alpha1
+
+    - id: alpha-with-dpf-beta-shim
+      opi:
+        group: opi.opiproject.org
+        servedVersions: [v1alpha1]
+      dpf:
+        groups:
+          - operator.dpu.nvidia.com
+          - provisioning.dpu.nvidia.com
+          - svc.dpu.nvidia.com
+        servedVersions: [v1beta1]
+      translator: TranslatorV1Alpha1
+      notes: DPF v1beta1 field-mapping shim; same translator binary, alternate schema profile
+      ci:
+        contractGate: true
+        e2eLane: kind-nvidia-v1alpha1-dpf-beta
+
+    - id: beta-aligned
+      opi:
+        group: opi.opiproject.org
+        servedVersions: [v1beta1]
+      dpf:
+        groups:
+          - operator.dpu.nvidia.com
+          - provisioning.dpu.nvidia.com
+          - svc.dpu.nvidia.com
+        servedVersions: [v1beta1]
+      translator: TranslatorV1Beta1
+      ci:
+        contractGate: true
+        e2eLane: kind-nvidia-v1beta1
+
+    - id: ga
+      opi:
+        group: opi.opiproject.org
+        servedVersions: [v1]
+      dpf:
+        groups:
+          - operator.dpu.nvidia.com
+          - provisioning.dpu.nvidia.com
+          - svc.dpu.nvidia.com
+        servedVersions: [v1]
+      translator: TranslatorV1
+      ci:
+        contractGate: true
+        e2eLane: bf3-hardware-v1
+        topologyModes: [DPFNative, OPIConverged]
+
+  policy:
+    # CRDs never downgrade on rollback (E12).
+    allowCrdDowngrade: false
+    onNoMatch:
+      condition: VersionIncompatible
+      metric: opi_nvidia_vsp_version_incompatible
+      blockStatusWrites: true

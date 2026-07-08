@@ -1,0 +1,19 @@
+# Injected by CRD Translation Controller from ServiceFunctionChain.spec.networkFunctions.
+# See testdata/golden/sfc-web-chain.yaml for a worked example.
+
+networkFunctions: []
+# - name: firewall
+#   image: example.com/fw:1.0.0
+# - name: router
+#   image: example.com/router:1.0.0
+
+nodeSelector:
+  dpu: "true"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: "1"
+    memory: 512Mi

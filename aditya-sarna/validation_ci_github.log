@@ -1,0 +1,1560 @@
+grpc-vsp	Set up job	﻿2026-07-07T20:11:39.4985452Z Current runner version: '2.335.1'
+grpc-vsp	Set up job	2026-07-07T20:11:39.5026665Z ##[group]Runner Image Provisioner
+grpc-vsp	Set up job	2026-07-07T20:11:39.5027949Z Hosted Compute Agent
+grpc-vsp	Set up job	2026-07-07T20:11:39.5028970Z Version: 20260624.560
+grpc-vsp	Set up job	2026-07-07T20:11:39.5029959Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+grpc-vsp	Set up job	2026-07-07T20:11:39.5031086Z Build Date: 2026-06-24T18:26:47Z
+grpc-vsp	Set up job	2026-07-07T20:11:39.5032236Z Worker ID: {eea6ae40-7d12-47e9-bb04-c5bd89127967}
+grpc-vsp	Set up job	2026-07-07T20:11:39.5033324Z Azure Region: centralus
+grpc-vsp	Set up job	2026-07-07T20:11:39.5034184Z ##[endgroup]
+grpc-vsp	Set up job	2026-07-07T20:11:39.5036913Z ##[group]Operating System
+grpc-vsp	Set up job	2026-07-07T20:11:39.5037882Z Ubuntu
+grpc-vsp	Set up job	2026-07-07T20:11:39.5038767Z 24.04.4
+grpc-vsp	Set up job	2026-07-07T20:11:39.5039556Z LTS
+grpc-vsp	Set up job	2026-07-07T20:11:39.5040390Z ##[endgroup]
+grpc-vsp	Set up job	2026-07-07T20:11:39.5041403Z ##[group]Runner Image
+grpc-vsp	Set up job	2026-07-07T20:11:39.5042343Z Image: ubuntu-24.04
+grpc-vsp	Set up job	2026-07-07T20:11:39.5043172Z Version: 20260628.225.1
+grpc-vsp	Set up job	2026-07-07T20:11:39.5045533Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260628.225/images/ubuntu/Ubuntu2404-Readme.md
+grpc-vsp	Set up job	2026-07-07T20:11:39.5048515Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260628.225
+grpc-vsp	Set up job	2026-07-07T20:11:39.5050033Z ##[endgroup]
+grpc-vsp	Set up job	2026-07-07T20:11:39.5051862Z ##[group]GITHUB_TOKEN Permissions
+grpc-vsp	Set up job	2026-07-07T20:11:39.5054592Z Contents: read
+grpc-vsp	Set up job	2026-07-07T20:11:39.5055782Z Metadata: read
+grpc-vsp	Set up job	2026-07-07T20:11:39.5056786Z Packages: read
+grpc-vsp	Set up job	2026-07-07T20:11:39.5057623Z ##[endgroup]
+grpc-vsp	Set up job	2026-07-07T20:11:39.5060812Z Secret source: Actions
+grpc-vsp	Set up job	2026-07-07T20:11:39.5061951Z Prepare workflow directory
+grpc-vsp	Set up job	2026-07-07T20:11:39.6078462Z Prepare all required actions
+grpc-vsp	Set up job	2026-07-07T20:11:39.6195175Z Getting action download info
+grpc-vsp	Set up job	2026-07-07T20:11:39.9602710Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+grpc-vsp	Set up job	2026-07-07T20:11:40.1909370Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+grpc-vsp	Set up job	2026-07-07T20:11:41.0397757Z Complete job name: grpc-vsp
+grpc-vsp	Run actions/checkout@v4	﻿2026-07-07T20:11:41.1183152Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1192593Z ##[group]Run actions/checkout@v4
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1193567Z with:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1194335Z   repository: Aditya-Sarna/opi-assignment1-ci-proof
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1199195Z   token: ***
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1199909Z   ssh-strict: true
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1200613Z   ssh-user: git
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1201307Z   persist-credentials: true
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1202042Z   clean: true
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1202728Z   sparse-checkout-cone-mode: true
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1203501Z   fetch-depth: 1
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1204176Z   fetch-tags: false
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1204981Z   show-progress: true
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1205672Z   lfs: false
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1206362Z   submodules: false
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1207121Z   set-safe-directory: true
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.1208327Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.2408232Z Syncing repository: Aditya-Sarna/opi-assignment1-ci-proof
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.2411280Z ##[group]Getting Git version info
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.2412984Z Working directory is '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.2415297Z [command]/usr/bin/git version
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.6929245Z git version 2.54.0
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7061186Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7069339Z Temporarily overriding HOME='/home/runner/work/_temp/2ab6a17a-9769-4f1b-8e32-96bcc2e4a920' before making global git config changes
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7072928Z Adding repository directory to the temporary git global config as a safe directory
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7077054Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7085032Z Deleting the contents of '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7089746Z ##[group]Initializing the repository
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7094101Z [command]/usr/bin/git init /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7108381Z hint: Using 'master' as the name for the initial branch. This default branch name
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7111985Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7117535Z hint: to use in all of your new repositories, which will suppress this warning,
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7119998Z hint: call:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7121127Z hint:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7122840Z hint: 	git config --global init.defaultBranch <name>
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7125066Z hint:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7127102Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7130005Z hint: 'development'. The just-created branch can be renamed via this command:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7131847Z hint:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7132804Z hint: 	git branch -m <name>
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7133887Z hint:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7136261Z hint: Disable this message with "git config set advice.defaultBranchName false"
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7140492Z Initialized empty Git repository in /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/.git/
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7149788Z [command]/usr/bin/git remote add origin https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7185289Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7194192Z ##[group]Disabling automatic garbage collection
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7198639Z [command]/usr/bin/git config --local gc.auto 0
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7230669Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7232487Z ##[group]Setting up auth
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7237458Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.7276990Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8437175Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8449974Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8461867Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8470781Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8480010Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8488804Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8491797Z ##[group]Fetching the repository
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:41.8497391Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +de0bbd6a7b957a7fc01903028f32af6d27dfb651:refs/remotes/origin/main
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2527189Z From https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2546375Z  * [new ref]         de0bbd6a7b957a7fc01903028f32af6d27dfb651 -> origin/main
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2551420Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2552936Z ##[group]Determining the checkout info
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2555369Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2560993Z [command]/usr/bin/git sparse-checkout disable
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2612489Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2649963Z ##[group]Checking out the ref
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2651373Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2765752Z Switched to a new branch 'main'
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2767116Z branch 'main' set up to track 'origin/main'.
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2778620Z ##[endgroup]
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2835181Z [command]/usr/bin/git log -1 --format=%H
+grpc-vsp	Run actions/checkout@v4	2026-07-07T20:11:42.2863232Z de0bbd6a7b957a7fc01903028f32af6d27dfb651
+grpc-vsp	Run actions/setup-go@v5	﻿2026-07-07T20:11:42.3219196Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3224566Z ##[group]Run actions/setup-go@v5
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3225598Z with:
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3226047Z   go-version: 1.22
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3226563Z   check-latest: false
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3234947Z   token: ***
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3235427Z   cache: true
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.3235903Z ##[endgroup]
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.4660337Z Setup go version spec 1.22
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.4721727Z Attempting to download 1.22...
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.4832674Z (node:2047) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:42.4836952Z (Use `node --trace-deprecation ...` to show where the warning was created)
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:43.1407783Z matching 1.22...
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:43.1444838Z Acquiring 1.22.12 from https://github.com/actions/go-versions/releases/download/1.22.12-13149489080/go-1.22.12-linux-x64.tar.gz
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:43.9439385Z Extracting Go...
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:43.9643624Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/cd3d4c71-2e80-49e5-87ad-334273f8e4ff -f /home/runner/work/_temp/cf651b06-a7a2-4bbb-94d9-5a12787760aa
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:45.8786452Z Successfully extracted go to /home/runner/work/_temp/cd3d4c71-2e80-49e5-87ad-334273f8e4ff
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:45.8787857Z Adding to the cache ...
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9439332Z Successfully cached go to /opt/hostedtoolcache/go/1.22.12/x64
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9445437Z Added go to the path
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9446246Z Successfully set up Go version 1.22
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9680928Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9735415Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9770474Z /home/runner/go/pkg/mod
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:50.9786251Z /home/runner/.cache/go-build
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.1388210Z Cache is not found
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.1417597Z go version go1.22.12 linux/amd64
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.1418136Z 
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.1418693Z ##[group]go env
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2595993Z GO111MODULE=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2596742Z GOARCH='amd64'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2597250Z GOBIN=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2597725Z GOCACHE='/home/runner/.cache/go-build'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2598280Z GOENV='/home/runner/.config/go/env'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2598792Z GOEXE=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2599174Z GOEXPERIMENT=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2599569Z GOFLAGS=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2599954Z GOHOSTARCH='amd64'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2600391Z GOHOSTOS='linux'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2600789Z GOINSECURE=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2601212Z GOMODCACHE='/home/runner/go/pkg/mod'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2601805Z GONOPROXY=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2602200Z GONOSUMDB=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2602709Z GOOS='linux'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2603123Z GOPATH='/home/runner/go'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2603540Z GOPRIVATE=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2604058Z GOPROXY='https://proxy.golang.org,direct'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2605300Z GOROOT='/opt/hostedtoolcache/go/1.22.12/x64'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2605904Z GOSUMDB='sum.golang.org'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2606360Z GOTMPDIR=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2606829Z GOTOOLCHAIN='auto'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2607460Z GOTOOLDIR='/opt/hostedtoolcache/go/1.22.12/x64/pkg/tool/linux_amd64'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2608091Z GOVCS=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2608500Z GOVERSION='go1.22.12'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2608910Z GCCGO='gccgo'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2609285Z GOAMD64='v1'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2609725Z AR='ar'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2610072Z CC='gcc'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2610416Z CXX='g++'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2610806Z CGO_ENABLED='1'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2611466Z GOMOD='/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/go.mod'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2612184Z GOWORK=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2612893Z CGO_CFLAGS='-O2 -g'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2613512Z CGO_CPPFLAGS=''
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2613941Z CGO_CXXFLAGS='-O2 -g'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2614348Z CGO_FFLAGS='-O2 -g'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2614961Z CGO_LDFLAGS='-O2 -g'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2615430Z PKG_CONFIG='pkg-config'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2616515Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3085420519=/tmp/go-build -gno-record-gcc-switches'
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2617468Z 
+grpc-vsp	Run actions/setup-go@v5	2026-07-07T20:11:51.2618074Z ##[endgroup]
+grpc-vsp	gRPC VSP daemon contract	﻿2026-07-07T20:11:51.2975731Z ##[group]Run chmod +x scripts/*.sh
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.2976166Z [36;1mchmod +x scripts/*.sh[0m
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.2976450Z [36;1m./scripts/demo-grpc.sh[0m
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.3098380Z shell: /usr/bin/bash -e {0}
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.3098696Z ##[endgroup]
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.3226755Z === gRPC VSP contract tests (bufconn) ===
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.3296398Z go: downloading google.golang.org/grpc v1.64.0
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:51.9702308Z go: downloading google.golang.org/protobuf v1.33.0
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:52.2323661Z go: downloading golang.org/x/net v0.23.0
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:52.2912489Z go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240318140521-94a12d6c2237
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:52.4144237Z go: downloading golang.org/x/sys v0.18.0
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:11:52.5845079Z go: downloading golang.org/x/text v0.14.0
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4496875Z === RUN   TestVSPDaemon_GRPC_InitGetDevicesPing
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4512854Z --- PASS: TestVSPDaemon_GRPC_InitGetDevicesPing (0.00s)
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4513797Z === RUN   TestVSPDaemon_GRPC_CreateNetworkFunction
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4536025Z --- PASS: TestVSPDaemon_GRPC_CreateNetworkFunction (0.00s)
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4537142Z === RUN   TestVSPDaemon_GRPC_DpuModeUnimplemented
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4552113Z --- PASS: TestVSPDaemon_GRPC_DpuModeUnimplemented (0.00s)
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4552728Z PASS
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.4553414Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton/vspgrpc	0.008s
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.5243581Z 
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.5244466Z === gRPC VSP live TCP smoke (in-test daemon on ephemeral port) ===
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9033802Z === RUN   TestLiveSmoke_TCPRoundTrip
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9054420Z     live_smoke_test.go:80: live TCP demo OK on 127.0.0.1:37801
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9057015Z --- PASS: TestLiveSmoke_TCPRoundTrip (0.00s)
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9059614Z PASS
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9060787Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton/vspgrpc	0.005s
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9172350Z 
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9172752Z GRPC DEMO PASSED
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9173191Z 
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9173605Z Manual live walkthrough:
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9174371Z   Terminal 1: go run ./cmd/vspdaemon -addr :50051 -seed-nf
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9175447Z   Terminal 2: go run ./cmd/vspclient -addr localhost:50051 -nf
+grpc-vsp	gRPC VSP daemon contract	2026-07-07T20:12:19.9179786Z   (or set VSP_LIVE_DEMO=1 ./scripts/demo-grpc.sh for automated two-process demo)
+grpc-vsp	Post Run actions/setup-go@v5	﻿2026-07-07T20:12:19.9282817Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:19.9284121Z Post job cleanup.
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.0608231Z (node:4605) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.0609677Z (Use `node --trace-deprecation ...` to show where the warning was created)
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.0661299Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.0705102Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.0771119Z /home/runner/go/pkg/mod
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.0783185Z /home/runner/.cache/go-build
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:20.1015203Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof --files-from manifest.txt --use-compress-program zstdmt
+grpc-vsp	Post Run actions/setup-go@v5	2026-07-07T20:12:21.1806886Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.22.12-8b7077075f06de90cd4beea1da2e2ca73835190f7e4b6a3cfd79bd7390ced5ab, another job may be creating this cache.
+grpc-vsp	Post Run actions/checkout@v4	﻿2026-07-07T20:12:21.2005382Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.2006580Z Post job cleanup.
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.2899877Z [command]/usr/bin/git version
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.2942420Z git version 2.54.0
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.2980525Z Temporarily overriding HOME='/home/runner/work/_temp/99a09e07-b06b-4042-a75a-72c990ede2f0' before making global git config changes
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.2982038Z Adding repository directory to the temporary git global config as a safe directory
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.2987862Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3026970Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3064617Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3350651Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3379474Z http.https://github.com/.extraheader
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3391640Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3427586Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3668775Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+grpc-vsp	Post Run actions/checkout@v4	2026-07-07T20:12:21.3702564Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+grpc-vsp	Complete job	﻿2026-07-07T20:12:21.4140819Z Cleaning up orphan processes
+grpc-vsp	Complete job	2026-07-07T20:12:21.4410029Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+unit-contract	Set up job	﻿2026-07-07T20:11:39.5862367Z Current runner version: '2.335.1'
+unit-contract	Set up job	2026-07-07T20:11:39.5897423Z ##[group]Runner Image Provisioner
+unit-contract	Set up job	2026-07-07T20:11:39.5899016Z Hosted Compute Agent
+unit-contract	Set up job	2026-07-07T20:11:39.5899776Z Version: 20260624.560
+unit-contract	Set up job	2026-07-07T20:11:39.5900658Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+unit-contract	Set up job	2026-07-07T20:11:39.5901629Z Build Date: 2026-06-24T18:26:47Z
+unit-contract	Set up job	2026-07-07T20:11:39.5902542Z Worker ID: {92b315cb-1fd7-4b16-9c89-d98cdd70a265}
+unit-contract	Set up job	2026-07-07T20:11:39.5903622Z Azure Region: northcentralus
+unit-contract	Set up job	2026-07-07T20:11:39.5904434Z ##[endgroup]
+unit-contract	Set up job	2026-07-07T20:11:39.5906390Z ##[group]Operating System
+unit-contract	Set up job	2026-07-07T20:11:39.5907262Z Ubuntu
+unit-contract	Set up job	2026-07-07T20:11:39.5907875Z 24.04.4
+unit-contract	Set up job	2026-07-07T20:11:39.5908783Z LTS
+unit-contract	Set up job	2026-07-07T20:11:39.5909452Z ##[endgroup]
+unit-contract	Set up job	2026-07-07T20:11:39.5910134Z ##[group]Runner Image
+unit-contract	Set up job	2026-07-07T20:11:39.5910956Z Image: ubuntu-24.04
+unit-contract	Set up job	2026-07-07T20:11:39.5911652Z Version: 20260628.225.1
+unit-contract	Set up job	2026-07-07T20:11:39.5913092Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260628.225/images/ubuntu/Ubuntu2404-Readme.md
+unit-contract	Set up job	2026-07-07T20:11:39.5915254Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260628.225
+unit-contract	Set up job	2026-07-07T20:11:39.5916458Z ##[endgroup]
+unit-contract	Set up job	2026-07-07T20:11:39.5917950Z ##[group]GITHUB_TOKEN Permissions
+unit-contract	Set up job	2026-07-07T20:11:39.5921285Z Contents: read
+unit-contract	Set up job	2026-07-07T20:11:39.5922092Z Metadata: read
+unit-contract	Set up job	2026-07-07T20:11:39.5922884Z Packages: read
+unit-contract	Set up job	2026-07-07T20:11:39.5923587Z ##[endgroup]
+unit-contract	Set up job	2026-07-07T20:11:39.5926225Z Secret source: Actions
+unit-contract	Set up job	2026-07-07T20:11:39.5927490Z Prepare workflow directory
+unit-contract	Set up job	2026-07-07T20:11:39.6393156Z Prepare all required actions
+unit-contract	Set up job	2026-07-07T20:11:39.6449406Z Getting action download info
+unit-contract	Set up job	2026-07-07T20:11:39.9798683Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+unit-contract	Set up job	2026-07-07T20:11:40.0989830Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+unit-contract	Set up job	2026-07-07T20:11:41.2877002Z Complete job name: unit-contract
+unit-contract	Run actions/checkout@v4	﻿2026-07-07T20:11:41.3670669Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3683155Z ##[group]Run actions/checkout@v4
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3684570Z with:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3685681Z   repository: Aditya-Sarna/opi-assignment1-ci-proof
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3695210Z   token: ***
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3696233Z   ssh-strict: true
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3697216Z   ssh-user: git
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3698544Z   persist-credentials: true
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3699807Z   clean: true
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3700836Z   sparse-checkout-cone-mode: true
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3702029Z   fetch-depth: 1
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3703043Z   fetch-tags: false
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3704068Z   show-progress: true
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3705086Z   lfs: false
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3706051Z   submodules: false
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3707280Z   set-safe-directory: true
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.3708662Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5006711Z Syncing repository: Aditya-Sarna/opi-assignment1-ci-proof
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5010503Z ##[group]Getting Git version info
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5012720Z Working directory is '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5015743Z [command]/usr/bin/git version
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7384142Z git version 2.54.0
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7391852Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7400838Z Temporarily overriding HOME='/home/runner/work/_temp/6dfde206-1cf0-43de-9ead-27f76d308f69' before making global git config changes
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7404085Z Adding repository directory to the temporary git global config as a safe directory
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7407051Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7589407Z Deleting the contents of '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7607536Z ##[group]Initializing the repository
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7612027Z [command]/usr/bin/git init /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9248766Z hint: Using 'master' as the name for the initial branch. This default branch name
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9250443Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9251596Z hint: to use in all of your new repositories, which will suppress this warning,
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9252346Z hint: call:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9253168Z hint:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9254235Z hint: 	git config --global init.defaultBranch <name>
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9255036Z hint:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9255948Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9256998Z hint: 'development'. The just-created branch can be renamed via this command:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9257928Z hint:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9258789Z hint: 	git branch -m <name>
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9259472Z hint:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9260330Z hint: Disable this message with "git config set advice.defaultBranchName false"
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9261481Z Initialized empty Git repository in /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/.git/
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9264098Z [command]/usr/bin/git remote add origin https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9463970Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9465258Z ##[group]Disabling automatic garbage collection
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9468187Z [command]/usr/bin/git config --local gc.auto 0
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9573453Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9574554Z ##[group]Setting up auth
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9585778Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:41.9685875Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7164581Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7198337Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7499725Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7562825Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7832731Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7966917Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.7992458Z ##[group]Fetching the repository
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:42.8003134Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +de0bbd6a7b957a7fc01903028f32af6d27dfb651:refs/remotes/origin/main
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.3992970Z From https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.3999877Z  * [new ref]         de0bbd6a7b957a7fc01903028f32af6d27dfb651 -> origin/main
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.4299963Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.4301037Z ##[group]Determining the checkout info
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.4302146Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.4305020Z [command]/usr/bin/git sparse-checkout disable
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.5909863Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.5986254Z ##[group]Checking out the ref
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.5998898Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.6867470Z Switched to a new branch 'main'
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.6868628Z branch 'main' set up to track 'origin/main'.
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.6870464Z ##[endgroup]
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.7069700Z [command]/usr/bin/git log -1 --format=%H
+unit-contract	Run actions/checkout@v4	2026-07-07T20:11:43.7086851Z de0bbd6a7b957a7fc01903028f32af6d27dfb651
+unit-contract	Run actions/setup-go@v5	﻿2026-07-07T20:11:43.7324721Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7326865Z ##[group]Run actions/setup-go@v5
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7327268Z with:
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7327540Z   go-version: 1.22
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7327831Z   check-latest: false
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7330692Z   token: ***
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7330984Z   cache: true
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.7331305Z ##[endgroup]
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.8689585Z Setup go version spec 1.22
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.8761467Z Attempting to download 1.22...
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.8870315Z (node:2043) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.8871955Z (Use `node --trace-deprecation ...` to show where the warning was created)
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:44.4574706Z matching 1.22...
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:44.4610843Z Acquiring 1.22.12 from https://github.com/actions/go-versions/releases/download/1.22.12-13149489080/go-1.22.12-linux-x64.tar.gz
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:45.0146457Z Extracting Go...
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:45.0248811Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8681b485-3aea-48e3-9440-1d5a98b80402 -f /home/runner/work/_temp/d31e2c0c-1138-461b-8642-fc040b0657d7
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:47.0044102Z Successfully extracted go to /home/runner/work/_temp/8681b485-3aea-48e3-9440-1d5a98b80402
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:47.0045188Z Adding to the cache ...
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0181282Z Successfully cached go to /opt/hostedtoolcache/go/1.22.12/x64
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0182224Z Added go to the path
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0183560Z Successfully set up Go version 1.22
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0369380Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0403123Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0442526Z /home/runner/go/pkg/mod
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.0450049Z /home/runner/.cache/go-build
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.1693221Z Cache is not found
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.1726179Z go version go1.22.12 linux/amd64
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.1727094Z 
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.1727835Z ##[group]go env
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2909905Z GO111MODULE=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2912435Z GOARCH='amd64'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2913004Z GOBIN=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2916035Z GOCACHE='/home/runner/.cache/go-build'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2916746Z GOENV='/home/runner/.config/go/env'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2917405Z GOEXE=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2917867Z GOEXPERIMENT=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2918591Z GOFLAGS=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2919132Z GOHOSTARCH='amd64'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2919631Z GOHOSTOS='linux'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2920203Z GOINSECURE=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2920777Z GOMODCACHE='/home/runner/go/pkg/mod'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2921366Z GONOPROXY=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2921834Z GONOSUMDB=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2922324Z GOOS='linux'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2922825Z GOPATH='/home/runner/go'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2923361Z GOPRIVATE=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2923895Z GOPROXY='https://proxy.golang.org,direct'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2924525Z GOROOT='/opt/hostedtoolcache/go/1.22.12/x64'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2925149Z GOSUMDB='sum.golang.org'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2925692Z GOTMPDIR=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2926228Z GOTOOLCHAIN='auto'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2926877Z GOTOOLDIR='/opt/hostedtoolcache/go/1.22.12/x64/pkg/tool/linux_amd64'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2927599Z GOVCS=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2928633Z GOVERSION='go1.22.12'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2929354Z GCCGO='gccgo'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2929841Z GOAMD64='v1'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2930355Z AR='ar'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2930787Z CC='gcc'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2931273Z CXX='g++'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2931762Z CGO_ENABLED='1'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2932496Z GOMOD='/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/go.mod'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2933341Z GOWORK=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2934144Z CGO_CFLAGS='-O2 -g'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2935135Z CGO_CPPFLAGS=''
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2935645Z CGO_CXXFLAGS='-O2 -g'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2936167Z CGO_FFLAGS='-O2 -g'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2936670Z CGO_LDFLAGS='-O2 -g'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2937186Z PKG_CONFIG='pkg-config'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2938510Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build1147471305=/tmp/go-build -gno-record-gcc-switches'
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2939527Z 
+unit-contract	Run actions/setup-go@v5	2026-07-07T20:11:59.2940256Z ##[endgroup]
+unit-contract	Unit + contract + digest	﻿2026-07-07T20:11:59.3085772Z ##[group]Run chmod +x scripts/*.sh
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.3086291Z [36;1mchmod +x scripts/*.sh[0m
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.3086680Z [36;1m./scripts/verify.sh[0m
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.3210409Z shell: /usr/bin/bash -e {0}
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.3210851Z ##[endgroup]
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.3333144Z === go vet ===
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.3435875Z go: downloading google.golang.org/grpc v1.64.0
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.5899531Z go: downloading google.golang.org/protobuf v1.33.0
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.7939814Z go: downloading gopkg.in/yaml.v3 v3.0.1
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.8003095Z go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240318140521-94a12d6c2237
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.8168814Z go: downloading golang.org/x/net v0.23.0
+unit-contract	Unit + contract + digest	2026-07-07T20:11:59.8741524Z go: downloading golang.org/x/sys v0.18.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:00.1004347Z go: downloading golang.org/x/text v0.14.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:27.6326297Z === go test (unit + contract + BF-3 lane spec) ===
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1346621Z === RUN   TestBF3LaneSpec_Complete
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1358705Z --- PASS: TestBF3LaneSpec_Complete (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1359920Z === RUN   TestDeterministicName_Stable
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1360648Z --- PASS: TestDeterministicName_Stable (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1361601Z === RUN   TestTranslateSFC_GoldenShape
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1382624Z --- PASS: TestTranslateSFC_GoldenShape (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1383687Z === RUN   TestTranslateSFC_MatchesGolden
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1384511Z --- PASS: TestTranslateSFC_MatchesGolden (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1385466Z === RUN   TestTranslateSFC_NoIPAMWhenUnset
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1386269Z --- PASS: TestTranslateSFC_NoIPAMWhenUnset (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1387206Z === RUN   TestApplyPlan_Idempotent
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1387869Z --- PASS: TestApplyPlan_Idempotent (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1388797Z === RUN   TestNextState_TruthTable
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1389416Z --- PASS: TestNextState_TruthTable (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1390277Z === RUN   TestInit_Contract
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1391017Z --- PASS: TestInit_Contract (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1391653Z === RUN   TestSetNumVfs_ShrinkGuard
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1392445Z --- PASS: TestSetNumVfs_ShrinkGuard (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1393064Z === RUN   TestSetNumVfs_Converges
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1393797Z --- PASS: TestSetNumVfs_Converges (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1394534Z === RUN   TestGetDevices_HealthFromDPU
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1395336Z --- PASS: TestGetDevices_HealthFromDPU (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1396015Z === RUN   TestCreateNF_UnavailableThenSuccess
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1396838Z --- PASS: TestCreateNF_UnavailableThenSuccess (0.07s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1397503Z === RUN   TestPing_HealthStaleness
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1398346Z --- PASS: TestPing_HealthStaleness (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1399088Z === RUN   TestSFCReconciler_ApplyThenReady
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1399745Z --- PASS: TestSFCReconciler_ApplyThenReady (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1400618Z === RUN   TestSFCReconciler_FinalizerGC
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1401247Z --- PASS: TestSFCReconciler_FinalizerGC (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1402015Z === RUN   TestBackoffAndFinalizers
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1402761Z --- PASS: TestBackoffAndFinalizers (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1403457Z === RUN   TestVersionCompatibilityController
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1404340Z --- PASS: TestVersionCompatibilityController (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1405013Z === RUN   TestForceCleanupChecker
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1405727Z --- PASS: TestForceCleanupChecker (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1406812Z === RUN   TestSimulatorContract_MatchesTranslateSFC
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1407914Z --- PASS: TestSimulatorContract_MatchesTranslateSFC (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1408954Z === RUN   TestSimulatorContract_MatchesGoldenYAML
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1409829Z --- PASS: TestSimulatorContract_MatchesGoldenYAML (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1410576Z === RUN   TestDPFBundle_NoPlaceholderDigests
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1411435Z --- PASS: TestDPFBundle_NoPlaceholderDigests (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1412063Z === RUN   TestDPFBundle_AlignedWithCompatibilityMatrix
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1412746Z --- PASS: TestDPFBundle_AlignedWithCompatibilityMatrix (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1413780Z PASS
+unit-contract	Unit + contract + digest	2026-07-07T20:12:30.1414408Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton	0.074s
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.3450232Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/api/vsp	[no test files]
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.3970095Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspclient	[no test files]
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.4768311Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspdaemon	[no test files]
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7534285Z === RUN   TestLiveSmoke_TCPRoundTrip
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7535350Z     live_smoke_test.go:80: live TCP demo OK on 127.0.0.1:42689
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7536291Z --- PASS: TestLiveSmoke_TCPRoundTrip (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7537030Z === RUN   TestVSPDaemon_GRPC_InitGetDevicesPing
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7537691Z --- PASS: TestVSPDaemon_GRPC_InitGetDevicesPing (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7538573Z === RUN   TestVSPDaemon_GRPC_CreateNetworkFunction
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7539312Z --- PASS: TestVSPDaemon_GRPC_CreateNetworkFunction (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7540072Z === RUN   TestVSPDaemon_GRPC_DpuModeUnimplemented
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7540780Z --- PASS: TestVSPDaemon_GRPC_DpuModeUnimplemented (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7541373Z PASS
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7541990Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton/vspgrpc	0.008s
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7706958Z === bundle digest resolution ===
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7741232Z === DPF bundle digest verification ===
+unit-contract	Unit + contract + digest	2026-07-07T20:12:39.7742279Z Inspecting nvcr.io/nvidia/doca/dpf-system:v25.7.0 ...
+unit-contract	Unit + contract + digest	2026-07-07T20:12:41.0072261Z Inspecting nvcr.io/nvidia/doca/hostdriver:v25.7.0 ...
+unit-contract	Unit + contract + digest	2026-07-07T20:12:41.7480780Z Inspecting quay.io/argoproj/argocd:v2.14.2 ...
+unit-contract	Unit + contract + digest	2026-07-07T20:12:42.3681430Z === Bundle manifest placeholder check ===
+unit-contract	Unit + contract + digest	2026-07-07T20:12:42.3695699Z ALL DIGEST CHECKS PASSED
+unit-contract	Unit + contract + digest	2026-07-07T20:12:42.3697096Z === integration (envtest) ===
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.2035736Z go: downloading k8s.io/apimachinery v0.30.2
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.3521766Z go: downloading sigs.k8s.io/controller-runtime v0.18.5
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.3523928Z go: downloading k8s.io/client-go v0.30.2
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.4764082Z go: downloading k8s.io/klog/v2 v2.120.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.5064854Z go: downloading github.com/gogo/protobuf v1.3.2
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.8249782Z go: downloading github.com/google/gofuzz v1.2.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.8370095Z go: downloading github.com/evanphx/json-patch/v5 v5.9.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:44.8768361Z go: downloading k8s.io/api v0.30.2
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.1891639Z go: downloading k8s.io/apiextensions-apiserver v0.30.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.2780826Z go: downloading k8s.io/utils v0.0.0-20230726121419-3b25d923346b
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.2788524Z go: downloading sigs.k8s.io/yaml v1.3.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.3035567Z go: downloading sigs.k8s.io/structured-merge-diff/v4 v4.4.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.3283138Z go: downloading sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.3448935Z go: downloading github.com/go-logr/logr v1.4.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.3497059Z go: downloading gopkg.in/inf.v0 v0.9.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.3611740Z go: downloading github.com/pkg/errors v0.9.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.3672519Z go: downloading k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.5470770Z go: downloading gopkg.in/yaml.v2 v2.4.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.5487099Z go: downloading github.com/json-iterator/go v1.1.12
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.5619274Z go: downloading github.com/google/gnostic-models v0.6.8
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.5971781Z go: downloading github.com/go-openapi/jsonreference v0.20.2
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.5974068Z go: downloading github.com/go-openapi/swag v0.22.3
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6162080Z go: downloading golang.org/x/oauth2 v0.18.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6194663Z go: downloading golang.org/x/term v0.18.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6310108Z go: downloading golang.org/x/time v0.3.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6477651Z go: downloading github.com/golang/protobuf v1.5.4
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6485612Z go: downloading github.com/imdario/mergo v0.3.6
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6612641Z go: downloading github.com/spf13/pflag v1.0.5
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6784137Z go: downloading github.com/davecgh/go-spew v1.1.1
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6833537Z go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6985213Z go: downloading github.com/modern-go/reflect2 v1.0.2
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.6997987Z go: downloading github.com/go-openapi/jsonpointer v0.19.6
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.7132148Z go: downloading github.com/mailru/easyjson v0.7.7
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.7356415Z go: downloading github.com/josharian/intern v1.0.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.7357627Z go: downloading github.com/google/uuid v1.6.0
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.7536020Z go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+unit-contract	Unit + contract + digest	2026-07-07T20:12:45.7540974Z go: downloading github.com/emicklei/go-restful/v3 v3.11.0
+unit-contract	Unit + contract + digest	2026-07-07T20:13:32.2146329Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/api/vsp	[no test files]
+unit-contract	Unit + contract + digest	2026-07-07T20:13:32.2795418Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspclient	[no test files]
+unit-contract	Unit + contract + digest	2026-07-07T20:13:32.5124016Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspdaemon	[no test files]
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7414272Z === RUN   TestBF3LaneSpec_Complete
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7415202Z --- PASS: TestBF3LaneSpec_Complete (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7416195Z === RUN   TestDeterministicName_Stable
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7417033Z --- PASS: TestDeterministicName_Stable (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7417805Z === RUN   TestTranslateSFC_GoldenShape
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7418714Z --- PASS: TestTranslateSFC_GoldenShape (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7419471Z === RUN   TestTranslateSFC_MatchesGolden
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7420217Z --- PASS: TestTranslateSFC_MatchesGolden (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7421073Z === RUN   TestTranslateSFC_NoIPAMWhenUnset
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7421911Z --- PASS: TestTranslateSFC_NoIPAMWhenUnset (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7422697Z === RUN   TestApplyPlan_Idempotent
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7423479Z --- PASS: TestApplyPlan_Idempotent (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7424229Z === RUN   TestNextState_TruthTable
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7424974Z --- PASS: TestNextState_TruthTable (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7425671Z === RUN   TestInit_Contract
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7426384Z --- PASS: TestInit_Contract (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7427125Z === RUN   TestSetNumVfs_ShrinkGuard
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7427822Z --- PASS: TestSetNumVfs_ShrinkGuard (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7428766Z === RUN   TestSetNumVfs_Converges
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7429545Z --- PASS: TestSetNumVfs_Converges (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7430333Z === RUN   TestGetDevices_HealthFromDPU
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7431093Z --- PASS: TestGetDevices_HealthFromDPU (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7431889Z === RUN   TestCreateNF_UnavailableThenSuccess
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7432699Z --- PASS: TestCreateNF_UnavailableThenSuccess (0.07s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7433669Z === RUN   TestPing_HealthStaleness
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7434272Z --- PASS: TestPing_HealthStaleness (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7435156Z === RUN   TestSFCReconciler_ApplyThenReady
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7435973Z --- PASS: TestSFCReconciler_ApplyThenReady (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7436706Z === RUN   TestSFCReconciler_FinalizerGC
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7437306Z --- PASS: TestSFCReconciler_FinalizerGC (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7438875Z === RUN   TestBackoffAndFinalizers
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7439620Z --- PASS: TestBackoffAndFinalizers (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7440378Z === RUN   TestVersionCompatibilityController
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7441212Z --- PASS: TestVersionCompatibilityController (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7442402Z === RUN   TestForceCleanupChecker
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7443017Z --- PASS: TestForceCleanupChecker (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7443688Z === RUN   TestIntegrationTranslateApplyAndReady
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7446427Z     integration_test.go:113: integration: 7 derived objects applied; ChainProgrammed after DPF Ready
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7449219Z --- PASS: TestIntegrationTranslateApplyAndReady (2.10s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7452180Z === RUN   TestIntegrationDriftCorrectionViaSSA
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7454754Z     integration_test.go:153: drift correction confirmed via SSA field manager "opi-nvidia-vsp"
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7456246Z --- PASS: TestIntegrationDriftCorrectionViaSSA (0.07s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7457037Z === RUN   TestIntegrationFinalizerTeardown
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7457919Z     integration_test.go:182: finalizer teardown confirmed: derived objects removed
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7459383Z --- PASS: TestIntegrationFinalizerTeardown (0.07s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7460220Z === RUN   TestSimulatorContract_MatchesTranslateSFC
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7460951Z --- PASS: TestSimulatorContract_MatchesTranslateSFC (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7461821Z === RUN   TestSimulatorContract_MatchesGoldenYAML
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7462590Z --- PASS: TestSimulatorContract_MatchesGoldenYAML (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7463386Z === RUN   TestDPFBundle_NoPlaceholderDigests
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7464169Z --- PASS: TestDPFBundle_NoPlaceholderDigests (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7464857Z === RUN   TestDPFBundle_AlignedWithCompatibilityMatrix
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7465729Z --- PASS: TestDPFBundle_AlignedWithCompatibilityMatrix (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7466406Z PASS
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7466985Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton	6.526s
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7467762Z === RUN   TestLiveSmoke_TCPRoundTrip
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7468662Z     live_smoke_test.go:80: live TCP demo OK on 127.0.0.1:42911
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7469337Z --- PASS: TestLiveSmoke_TCPRoundTrip (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7469984Z === RUN   TestVSPDaemon_GRPC_InitGetDevicesPing
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7470648Z --- PASS: TestVSPDaemon_GRPC_InitGetDevicesPing (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7471443Z === RUN   TestVSPDaemon_GRPC_CreateNetworkFunction
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7472144Z --- PASS: TestVSPDaemon_GRPC_CreateNetworkFunction (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7472932Z === RUN   TestVSPDaemon_GRPC_DpuModeUnimplemented
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7473683Z --- PASS: TestVSPDaemon_GRPC_DpuModeUnimplemented (0.00s)
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7474314Z PASS
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7475053Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton/vspgrpc	0.036s
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7918838Z INTEGRATION PASSED
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7919366Z 
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7920708Z ALL CHECKS PASSED
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7921368Z Full multi-lane record: ./scripts/verify-all.sh
+unit-contract	Unit + contract + digest	2026-07-07T20:13:38.7921948Z gRPC VSP demo: ./scripts/demo-grpc.sh
+unit-contract	Post Run actions/setup-go@v5	﻿2026-07-07T20:13:38.8020708Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.8021970Z Post job cleanup.
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9233857Z (node:8299) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9235080Z (Use `node --trace-deprecation ...` to show where the warning was created)
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9309680Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9359429Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9397540Z /home/runner/go/pkg/mod
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9401682Z /home/runner/.cache/go-build
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:38.9599743Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof --files-from manifest.txt --use-compress-program zstdmt
+unit-contract	Post Run actions/setup-go@v5	2026-07-07T20:13:41.4201047Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.22.12-8b7077075f06de90cd4beea1da2e2ca73835190f7e4b6a3cfd79bd7390ced5ab, another job may be creating this cache.
+unit-contract	Post Run actions/checkout@v4	﻿2026-07-07T20:13:41.4417902Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.4419256Z Post job cleanup.
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5260879Z [command]/usr/bin/git version
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5298612Z git version 2.54.0
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5333229Z Temporarily overriding HOME='/home/runner/work/_temp/84979d89-210c-4357-bece-c4fb1750b11d' before making global git config changes
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5336564Z Adding repository directory to the temporary git global config as a safe directory
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5339477Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5380023Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5416189Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5617832Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5645842Z http.https://github.com/.extraheader
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5657956Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5689269Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5881246Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+unit-contract	Post Run actions/checkout@v4	2026-07-07T20:13:41.5910790Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+unit-contract	Complete job	﻿2026-07-07T20:13:41.6222790Z Cleaning up orphan processes
+unit-contract	Complete job	2026-07-07T20:13:41.6460724Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+bf3-lane-contract	Set up job	﻿2026-07-07T20:11:39.4992829Z Current runner version: '2.335.1'
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5032199Z ##[group]Runner Image Provisioner
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5033546Z Hosted Compute Agent
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5034523Z Version: 20260624.560
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5035669Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5036864Z Build Date: 2026-06-24T18:26:47Z
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5038079Z Worker ID: {c5dcb8e2-94e4-4748-aa2e-ca0c1dfde956}
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5039313Z Azure Region: centralus
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5040357Z ##[endgroup]
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5043308Z ##[group]Operating System
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5044392Z Ubuntu
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5045350Z 24.04.4
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5046327Z LTS
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5047259Z ##[endgroup]
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5048277Z ##[group]Runner Image
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5049326Z Image: ubuntu-24.04
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5050255Z Version: 20260628.225.1
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5052583Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260628.225/images/ubuntu/Ubuntu2404-Readme.md
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5055731Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260628.225
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5057512Z ##[endgroup]
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5059381Z ##[group]GITHUB_TOKEN Permissions
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5062539Z Contents: read
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5063596Z Metadata: read
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5064640Z Packages: read
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5065573Z ##[endgroup]
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5068614Z Secret source: Actions
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5070014Z Prepare workflow directory
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5584314Z Prepare all required actions
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.5642427Z Getting action download info
+bf3-lane-contract	Set up job	2026-07-07T20:11:39.9495639Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+bf3-lane-contract	Set up job	2026-07-07T20:11:40.4774690Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+bf3-lane-contract	Set up job	2026-07-07T20:11:41.3427833Z Complete job name: bf3-lane-contract
+bf3-lane-contract	Run actions/checkout@v4	﻿2026-07-07T20:11:41.4324574Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4344752Z ##[group]Run actions/checkout@v4
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4346885Z with:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4348461Z   repository: Aditya-Sarna/opi-assignment1-ci-proof
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4365697Z   token: ***
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4367032Z   ssh-strict: true
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4368277Z   ssh-user: git
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4369762Z   persist-credentials: true
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4371952Z   clean: true
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4373489Z   sparse-checkout-cone-mode: true
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4375485Z   fetch-depth: 1
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4376972Z   fetch-tags: false
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4378566Z   show-progress: true
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4380181Z   lfs: false
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4381863Z   submodules: false
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4383526Z   set-safe-directory: true
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.4385620Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5989515Z Syncing repository: Aditya-Sarna/opi-assignment1-ci-proof
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5994862Z ##[group]Getting Git version info
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.5997882Z Working directory is '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6002865Z [command]/usr/bin/git version
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6095825Z git version 2.54.0
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6124932Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6141236Z Temporarily overriding HOME='/home/runner/work/_temp/db9241d6-3781-4b94-b992-7f5d94d0c548' before making global git config changes
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6147062Z Adding repository directory to the temporary git global config as a safe directory
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6152498Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6216221Z Deleting the contents of '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6222025Z ##[group]Initializing the repository
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6228405Z [command]/usr/bin/git init /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6392750Z hint: Using 'master' as the name for the initial branch. This default branch name
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6422501Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6438320Z hint: to use in all of your new repositories, which will suppress this warning,
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6443875Z hint: call:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6446958Z hint:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6462905Z hint: 	git config --global init.defaultBranch <name>
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6468501Z hint:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6470050Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6473256Z hint: 'development'. The just-created branch can be renamed via this command:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6476185Z hint:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6477632Z hint: 	git branch -m <name>
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6479190Z hint:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6480825Z hint: Disable this message with "git config set advice.defaultBranchName false"
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6484032Z Initialized empty Git repository in /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/.git/
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6490096Z [command]/usr/bin/git remote add origin https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6541238Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6544627Z ##[group]Disabling automatic garbage collection
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6547451Z [command]/usr/bin/git config --local gc.auto 0
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6587157Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6589992Z ##[group]Setting up auth
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6596415Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.6639920Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7132173Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7174279Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7425388Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7463897Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7721860Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7757396Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7760598Z ##[group]Fetching the repository
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:41.7772556Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +de0bbd6a7b957a7fc01903028f32af6d27dfb651:refs/remotes/origin/main
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1634887Z From https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1639224Z  * [new ref]         de0bbd6a7b957a7fc01903028f32af6d27dfb651 -> origin/main
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1679639Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1682888Z ##[group]Determining the checkout info
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1686133Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1688218Z [command]/usr/bin/git sparse-checkout disable
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1754167Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1778927Z ##[group]Checking out the ref
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1784330Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1894290Z Switched to a new branch 'main'
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1900913Z branch 'main' set up to track 'origin/main'.
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1908537Z ##[endgroup]
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1956549Z [command]/usr/bin/git log -1 --format=%H
+bf3-lane-contract	Run actions/checkout@v4	2026-07-07T20:11:42.1983315Z de0bbd6a7b957a7fc01903028f32af6d27dfb651
+bf3-lane-contract	Run actions/setup-go@v5	﻿2026-07-07T20:11:42.2335973Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2341277Z ##[group]Run actions/setup-go@v5
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2342495Z with:
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2343260Z   go-version: 1.22
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2344113Z   check-latest: false
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2354227Z   token: ***
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2355032Z   cache: true
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.2355815Z ##[endgroup]
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.3777810Z Setup go version spec 1.22
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.4000563Z Attempting to download 1.22...
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.4128153Z (node:2027) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:42.4133844Z (Use `node --trace-deprecation ...` to show where the warning was created)
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.0390723Z matching 1.22...
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.0501725Z Acquiring 1.22.12 from https://github.com/actions/go-versions/releases/download/1.22.12-13149489080/go-1.22.12-linux-x64.tar.gz
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.8352314Z Extracting Go...
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:43.8537329Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/4978e558-96dc-4f42-923b-20dbb6bc1a1e -f /home/runner/work/_temp/53c830e7-56ec-4d4e-979d-f019ca1e8236
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:45.6523422Z Successfully extracted go to /home/runner/work/_temp/4978e558-96dc-4f42-923b-20dbb6bc1a1e
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:45.6525527Z Adding to the cache ...
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.6978117Z Successfully cached go to /opt/hostedtoolcache/go/1.22.12/x64
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.6990255Z Added go to the path
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.6990931Z Successfully set up Go version 1.22
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.7240402Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.7292832Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.7344186Z /home/runner/go/pkg/mod
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.7357749Z /home/runner/.cache/go-build
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.8792171Z Cache is not found
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.8817506Z go version go1.22.12 linux/amd64
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.8818221Z 
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:53.8818910Z ##[group]go env
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4613035Z GO111MODULE=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4613966Z GOARCH='amd64'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4614725Z GOBIN=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4615303Z GOCACHE='/home/runner/.cache/go-build'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4615987Z GOENV='/home/runner/.config/go/env'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4616570Z GOEXE=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4617067Z GOEXPERIMENT=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4617593Z GOFLAGS=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4618282Z GOHOSTARCH='amd64'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4618865Z GOHOSTOS='linux'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4619439Z GOINSECURE=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4620105Z GOMODCACHE='/home/runner/go/pkg/mod'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4620732Z GONOPROXY=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4621222Z GONOSUMDB=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4622204Z GOOS='linux'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4623098Z GOPATH='/home/runner/go'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4623755Z GOPRIVATE=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4624484Z GOPROXY='https://proxy.golang.org,direct'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4625299Z GOROOT='/opt/hostedtoolcache/go/1.22.12/x64'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4625971Z GOSUMDB='sum.golang.org'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4626515Z GOTMPDIR=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4627001Z GOTOOLCHAIN='auto'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4627706Z GOTOOLDIR='/opt/hostedtoolcache/go/1.22.12/x64/pkg/tool/linux_amd64'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4628494Z GOVCS=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4628985Z GOVERSION='go1.22.12'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4629600Z GCCGO='gccgo'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4630188Z GOAMD64='v1'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4630750Z AR='ar'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4631289Z CC='gcc'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4632538Z CXX='g++'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4633060Z CGO_ENABLED='1'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4634044Z GOMOD='/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/go.mod'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4635123Z GOWORK=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4636141Z CGO_CFLAGS='-O2 -g'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4637179Z CGO_CPPFLAGS=''
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4637829Z CGO_CXXFLAGS='-O2 -g'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4638464Z CGO_FFLAGS='-O2 -g'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4639073Z CGO_LDFLAGS='-O2 -g'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4639641Z PKG_CONFIG='pkg-config'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4641061Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2486616669=/tmp/go-build -gno-record-gcc-switches'
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4642575Z 
+bf3-lane-contract	Run actions/setup-go@v5	2026-07-07T20:11:54.4643373Z ##[endgroup]
+bf3-lane-contract	BF-3 lane contract gate	﻿2026-07-07T20:11:54.4943594Z ##[group]Run chmod +x scripts/*.sh
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:11:54.4943972Z [36;1mchmod +x scripts/*.sh[0m
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:11:54.4944254Z [36;1m./scripts/e2e-bf3-hardware.sh[0m
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:11:54.5163629Z shell: /usr/bin/bash -e {0}
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:11:54.5164028Z ##[endgroup]
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:11:54.5289769Z === BF-3 lane contract (always) ===
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:11:54.5418444Z go: downloading gopkg.in/yaml.v3 v3.0.1
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4188799Z === RUN   TestBF3LaneSpec_Complete
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4191550Z --- PASS: TestBF3LaneSpec_Complete (0.00s)
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4192589Z PASS
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4202640Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton	0.002s
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4470307Z 
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4471711Z BF-3 HARDWARE LANE: contract verified; full lab run skipped (set BF3_LAB=1 + KUBECONFIG)
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4473151Z Lane spec: testdata/hardware/bf3-lane.yaml
+bf3-lane-contract	BF-3 lane contract gate	2026-07-07T20:12:05.4474187Z CI job: .github/workflows/verify.yml (integration + kind on Linux runners)
+bf3-lane-contract	Post Run actions/setup-go@v5	﻿2026-07-07T20:12:05.4576219Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.4577471Z Post job cleanup.
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.5852805Z (node:3042) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.5854524Z (Use `node --trace-deprecation ...` to show where the warning was created)
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.5942366Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.5993186Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.6024195Z /home/runner/go/pkg/mod
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.6048161Z /home/runner/.cache/go-build
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:05.6291119Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof --files-from manifest.txt --use-compress-program zstdmt
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:06.1148499Z (node:3042) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:06.6358917Z Sent 11127051 of 11127051 (100.0%), 20.0 MBs/sec
+bf3-lane-contract	Post Run actions/setup-go@v5	2026-07-07T20:12:06.8018082Z Cache saved with the key: setup-go-Linux-x64-ubuntu24-go-1.22.12-8b7077075f06de90cd4beea1da2e2ca73835190f7e4b6a3cfd79bd7390ced5ab
+bf3-lane-contract	Post Run actions/checkout@v4	﻿2026-07-07T20:12:06.8164658Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.8165954Z Post job cleanup.
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9096713Z [command]/usr/bin/git version
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9152251Z git version 2.54.0
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9187338Z Temporarily overriding HOME='/home/runner/work/_temp/2d148f20-7497-406e-a63b-b8056143ba54' before making global git config changes
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9190828Z Adding repository directory to the temporary git global config as a safe directory
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9194740Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9239624Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9281828Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9522542Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9560234Z http.https://github.com/.extraheader
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9573290Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9610948Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9847860Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+bf3-lane-contract	Post Run actions/checkout@v4	2026-07-07T20:12:06.9884759Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+bf3-lane-contract	Complete job	﻿2026-07-07T20:12:07.0314226Z Cleaning up orphan processes
+bf3-lane-contract	Complete job	2026-07-07T20:12:07.0570991Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+kind-e2e	Set up job	﻿2026-07-07T20:11:39.6102871Z Current runner version: '2.335.1'
+kind-e2e	Set up job	2026-07-07T20:11:39.6182730Z ##[group]Runner Image Provisioner
+kind-e2e	Set up job	2026-07-07T20:11:39.6184138Z Hosted Compute Agent
+kind-e2e	Set up job	2026-07-07T20:11:39.6185133Z Version: 20260624.560
+kind-e2e	Set up job	2026-07-07T20:11:39.6186367Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+kind-e2e	Set up job	2026-07-07T20:11:39.6187709Z Build Date: 2026-06-24T18:26:47Z
+kind-e2e	Set up job	2026-07-07T20:11:39.6209294Z Worker ID: {6e4b2dad-b3fe-4a3a-a395-8d179abcbf32}
+kind-e2e	Set up job	2026-07-07T20:11:39.6210716Z Azure Region: eastus
+kind-e2e	Set up job	2026-07-07T20:11:39.6211751Z ##[endgroup]
+kind-e2e	Set up job	2026-07-07T20:11:39.6214427Z ##[group]Operating System
+kind-e2e	Set up job	2026-07-07T20:11:39.6215543Z Ubuntu
+kind-e2e	Set up job	2026-07-07T20:11:39.6216555Z 24.04.4
+kind-e2e	Set up job	2026-07-07T20:11:39.6217590Z LTS
+kind-e2e	Set up job	2026-07-07T20:11:39.6218475Z ##[endgroup]
+kind-e2e	Set up job	2026-07-07T20:11:39.6219969Z ##[group]Runner Image
+kind-e2e	Set up job	2026-07-07T20:11:39.6221061Z Image: ubuntu-24.04
+kind-e2e	Set up job	2026-07-07T20:11:39.6222046Z Version: 20260628.225.1
+kind-e2e	Set up job	2026-07-07T20:11:39.6224089Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260628.225/images/ubuntu/Ubuntu2404-Readme.md
+kind-e2e	Set up job	2026-07-07T20:11:39.6227361Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260628.225
+kind-e2e	Set up job	2026-07-07T20:11:39.6249641Z ##[endgroup]
+kind-e2e	Set up job	2026-07-07T20:11:39.6251762Z ##[group]GITHUB_TOKEN Permissions
+kind-e2e	Set up job	2026-07-07T20:11:39.6254621Z Contents: read
+kind-e2e	Set up job	2026-07-07T20:11:39.6255769Z Metadata: read
+kind-e2e	Set up job	2026-07-07T20:11:39.6256693Z Packages: read
+kind-e2e	Set up job	2026-07-07T20:11:39.6258088Z ##[endgroup]
+kind-e2e	Set up job	2026-07-07T20:11:39.6261638Z Secret source: Actions
+kind-e2e	Set up job	2026-07-07T20:11:39.6262896Z Prepare workflow directory
+kind-e2e	Set up job	2026-07-07T20:11:39.6951541Z Prepare all required actions
+kind-e2e	Set up job	2026-07-07T20:11:39.7007556Z Getting action download info
+kind-e2e	Set up job	2026-07-07T20:11:39.9692936Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+kind-e2e	Set up job	2026-07-07T20:11:40.0877570Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+kind-e2e	Set up job	2026-07-07T20:11:40.8717631Z Download action repository 'helm/kind-action@v1' (SHA:ef37e7f390d99f746eb8b610417061a60e82a6cc)
+kind-e2e	Set up job	2026-07-07T20:11:41.1855377Z Complete job name: kind-e2e
+kind-e2e	Run actions/checkout@v4	﻿2026-07-07T20:11:41.2803526Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2816115Z ##[group]Run actions/checkout@v4
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2817355Z with:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2818291Z   repository: Aditya-Sarna/opi-assignment1-ci-proof
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2827156Z   token: ***
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2827944Z   ssh-strict: true
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2828873Z   ssh-user: git
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2829700Z   persist-credentials: true
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2830614Z   clean: true
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2831426Z   sparse-checkout-cone-mode: true
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2832422Z   fetch-depth: 1
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2833217Z   fetch-tags: false
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2834046Z   show-progress: true
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2834895Z   lfs: false
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2835678Z   submodules: false
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2836534Z   set-safe-directory: true
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.2837710Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.3957361Z Syncing repository: Aditya-Sarna/opi-assignment1-ci-proof
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.3960761Z ##[group]Getting Git version info
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.3962562Z Working directory is '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.3966046Z [command]/usr/bin/git version
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6752576Z git version 2.54.0
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6920146Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6925730Z Temporarily overriding HOME='/home/runner/work/_temp/256183e0-300e-4e6e-89eb-2970800294d2' before making global git config changes
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6929003Z Adding repository directory to the temporary git global config as a safe directory
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6931130Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6938425Z Deleting the contents of '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6940153Z ##[group]Initializing the repository
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.6941183Z [command]/usr/bin/git init /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7905013Z hint: Using 'master' as the name for the initial branch. This default branch name
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7940175Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7941909Z hint: to use in all of your new repositories, which will suppress this warning,
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7943864Z hint: call:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7945132Z hint:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7946755Z hint: 	git config --global init.defaultBranch <name>
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7948136Z hint:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7950456Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7969029Z hint: 'development'. The just-created branch can be renamed via this command:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7971034Z hint:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7973900Z hint: 	git branch -m <name>
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7975142Z hint:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7976867Z hint: Disable this message with "git config set advice.defaultBranchName false"
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7979185Z Initialized empty Git repository in /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/.git/
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7984308Z [command]/usr/bin/git remote add origin https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7989093Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7991430Z ##[group]Disabling automatic garbage collection
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7992931Z [command]/usr/bin/git config --local gc.auto 0
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.7997085Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8000951Z ##[group]Setting up auth
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8001960Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8004816Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8008399Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8011882Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8220482Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8225673Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8575933Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8581091Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8582187Z ##[group]Fetching the repository
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:41.8583831Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +de0bbd6a7b957a7fc01903028f32af6d27dfb651:refs/remotes/origin/main
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1196409Z From https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1197591Z  * [new ref]         de0bbd6a7b957a7fc01903028f32af6d27dfb651 -> origin/main
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1214482Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1215588Z ##[group]Determining the checkout info
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1216717Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1217420Z [command]/usr/bin/git sparse-checkout disable
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1265366Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1295638Z ##[group]Checking out the ref
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1299761Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1420213Z Switched to a new branch 'main'
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1421714Z branch 'main' set up to track 'origin/main'.
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1426074Z ##[endgroup]
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1471591Z [command]/usr/bin/git log -1 --format=%H
+kind-e2e	Run actions/checkout@v4	2026-07-07T20:11:42.1497764Z de0bbd6a7b957a7fc01903028f32af6d27dfb651
+kind-e2e	Run actions/setup-go@v5	﻿2026-07-07T20:11:42.1762950Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1764849Z ##[group]Run actions/setup-go@v5
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1765245Z with:
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1765562Z   go-version: 1.22
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1765913Z   check-latest: false
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1768447Z   token: ***
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1768968Z   cache: true
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.1769307Z ##[endgroup]
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.3150225Z Setup go version spec 1.22
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.3491076Z Attempting to download 1.22...
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.3590866Z (node:2048) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.3603068Z (Use `node --trace-deprecation ...` to show where the warning was created)
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.7543004Z matching 1.22...
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:42.7563193Z Acquiring 1.22.12 from https://github.com/actions/go-versions/releases/download/1.22.12-13149489080/go-1.22.12-linux-x64.tar.gz
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:43.3308432Z Extracting Go...
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:43.3434035Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/048b086f-53df-40f6-a035-5f529e286c3b -f /home/runner/work/_temp/94216c51-64cb-4b11-bf17-2cd4b5d25777
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:45.1822899Z Successfully extracted go to /home/runner/work/_temp/048b086f-53df-40f6-a035-5f529e286c3b
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:45.1824292Z Adding to the cache ...
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9464097Z Successfully cached go to /opt/hostedtoolcache/go/1.22.12/x64
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9466879Z Added go to the path
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9469869Z Successfully set up Go version 1.22
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9724905Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9780866Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9825946Z /home/runner/go/pkg/mod
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:50.9826925Z /home/runner/.cache/go-build
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.0432205Z Cache is not found
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.0460496Z go version go1.22.12 linux/amd64
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.0460888Z 
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.0461694Z ##[group]go env
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6562983Z GO111MODULE=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6568437Z GOARCH='amd64'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6570041Z GOBIN=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6570652Z GOCACHE='/home/runner/.cache/go-build'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6571638Z GOENV='/home/runner/.config/go/env'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6572357Z GOEXE=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6573142Z GOEXPERIMENT=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6573705Z GOFLAGS=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6574496Z GOHOSTARCH='amd64'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6575026Z GOHOSTOS='linux'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6575819Z GOINSECURE=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6576434Z GOMODCACHE='/home/runner/go/pkg/mod'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6577363Z GONOPROXY=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6577953Z GONOSUMDB=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6578984Z GOOS='linux'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6580591Z GOPATH='/home/runner/go'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6581253Z GOPRIVATE=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6582147Z GOPROXY='https://proxy.golang.org,direct'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6584565Z GOROOT='/opt/hostedtoolcache/go/1.22.12/x64'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6585070Z GOSUMDB='sum.golang.org'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6585430Z GOTMPDIR=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6585742Z GOTOOLCHAIN='auto'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6586264Z GOTOOLDIR='/opt/hostedtoolcache/go/1.22.12/x64/pkg/tool/linux_amd64'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6586850Z GOVCS=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6587156Z GOVERSION='go1.22.12'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6587503Z GCCGO='gccgo'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6587813Z GOAMD64='v1'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6588166Z AR='ar'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6588455Z CC='gcc'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6589227Z CXX='g++'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6589655Z CGO_ENABLED='1'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6590296Z GOMOD='/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/go.mod'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6591256Z GOWORK=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6591580Z CGO_CFLAGS='-O2 -g'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6592218Z CGO_CPPFLAGS=''
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6592576Z CGO_CXXFLAGS='-O2 -g'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6592945Z CGO_FFLAGS='-O2 -g'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6593303Z CGO_LDFLAGS='-O2 -g'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6593680Z PKG_CONFIG='pkg-config'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6594828Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build947816498=/tmp/go-build -gno-record-gcc-switches'
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6595823Z 
+kind-e2e	Run actions/setup-go@v5	2026-07-07T20:11:51.6596268Z ##[endgroup]
+kind-e2e	Install Kind	﻿2026-07-07T20:11:51.6824447Z ##[group]Run helm/kind-action@v1
+kind-e2e	Install Kind	2026-07-07T20:11:51.6824751Z with:
+kind-e2e	Install Kind	2026-07-07T20:11:51.6824944Z   install_only: true
+kind-e2e	Install Kind	2026-07-07T20:11:51.6825157Z   version: v0.31.0
+kind-e2e	Install Kind	2026-07-07T20:11:51.6825365Z   cluster_name: chart-testing
+kind-e2e	Install Kind	2026-07-07T20:11:51.6825594Z   wait: 60s
+kind-e2e	Install Kind	2026-07-07T20:11:51.6825776Z   verbosity: 0
+kind-e2e	Install Kind	2026-07-07T20:11:51.6825983Z   kubectl_version: v1.35.0
+kind-e2e	Install Kind	2026-07-07T20:11:51.6826209Z   registry: false
+kind-e2e	Install Kind	2026-07-07T20:11:51.6826409Z   registry_image: registry:2
+kind-e2e	Install Kind	2026-07-07T20:11:51.6826645Z   registry_name: kind-registry
+kind-e2e	Install Kind	2026-07-07T20:11:51.6826876Z   registry_port: 5000
+kind-e2e	Install Kind	2026-07-07T20:11:51.6827090Z   registry_enable_delete: false
+kind-e2e	Install Kind	2026-07-07T20:11:51.6827325Z   ignore_failed_clean: false
+kind-e2e	Install Kind	2026-07-07T20:11:51.6827549Z   cloud_provider: false
+kind-e2e	Install Kind	2026-07-07T20:11:51.6827759Z ##[endgroup]
+kind-e2e	Install Kind	2026-07-07T20:11:51.7198558Z Installing kind...
+kind-e2e	Install Kind	2026-07-07T20:11:51.7214360Z /opt/hostedtoolcache/kind/v0.31.0/amd64/kind/bin ~/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Install Kind	2026-07-07T20:11:52.5627663Z kind-linux-amd64: OK
+kind-e2e	Install Kind	2026-07-07T20:11:52.5779516Z ~/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Install Kind	2026-07-07T20:11:52.5780331Z Adding kind directory to PATH...
+kind-e2e	Install Kind	2026-07-07T20:11:52.5795751Z Installing kubectl...
+kind-e2e	Install Kind	2026-07-07T20:11:52.5811982Z /opt/hostedtoolcache/kind/v0.31.0/amd64/kubectl/bin ~/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Install Kind	2026-07-07T20:11:52.9280686Z kubectl: OK
+kind-e2e	Install Kind	2026-07-07T20:11:52.9284918Z ~/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Install Kind	2026-07-07T20:11:52.9286472Z Adding kubectl directory to PATH...
+kind-e2e	Install Kind	2026-07-07T20:11:52.9309293Z kind v0.31.0 go1.25.5 linux/amd64
+kind-e2e	Install Kind	2026-07-07T20:11:52.9688361Z Client Version: v1.35.0
+kind-e2e	Install Kind	2026-07-07T20:11:52.9692201Z Kustomize Version: v5.7.1
+kind-e2e	Kind e2e	﻿2026-07-07T20:11:52.9767742Z ##[group]Run chmod +x scripts/*.sh
+kind-e2e	Kind e2e	2026-07-07T20:11:52.9768109Z [36;1mchmod +x scripts/*.sh[0m
+kind-e2e	Kind e2e	2026-07-07T20:11:52.9768408Z [36;1mE2E_REQUIRE_KIND=1 ./scripts/e2e-kind.sh[0m
+kind-e2e	Kind e2e	2026-07-07T20:11:52.9959128Z shell: /usr/bin/bash -e {0}
+kind-e2e	Kind e2e	2026-07-07T20:11:52.9959435Z ##[endgroup]
+kind-e2e	Kind e2e	2026-07-07T20:11:55.3542321Z === Kind e2e: creating cluster opi-nvidia-e2e ===
+kind-e2e	Kind e2e	2026-07-07T20:11:55.4557227Z Creating cluster "opi-nvidia-e2e" ...
+kind-e2e	Kind e2e	2026-07-07T20:11:55.4558605Z  • Ensuring node image (kindest/node:v1.35.0) 🖼  ...
+kind-e2e	Kind e2e	2026-07-07T20:12:07.2111346Z  ✓ Ensuring node image (kindest/node:v1.35.0) 🖼
+kind-e2e	Kind e2e	2026-07-07T20:12:07.2112184Z  • Preparing nodes 📦   ...
+kind-e2e	Kind e2e	2026-07-07T20:12:10.0978588Z  ✓ Preparing nodes 📦 
+kind-e2e	Kind e2e	2026-07-07T20:12:10.1318018Z  • Writing configuration 📜  ...
+kind-e2e	Kind e2e	2026-07-07T20:12:10.3223349Z  ✓ Writing configuration 📜
+kind-e2e	Kind e2e	2026-07-07T20:12:10.3226810Z  • Starting control-plane 🕹️  ...
+kind-e2e	Kind e2e	2026-07-07T20:12:19.5674266Z  ✓ Starting control-plane 🕹️
+kind-e2e	Kind e2e	2026-07-07T20:12:19.5674970Z  • Installing CNI 🔌  ...
+kind-e2e	Kind e2e	2026-07-07T20:12:19.9017036Z  ✓ Installing CNI 🔌
+kind-e2e	Kind e2e	2026-07-07T20:12:19.9017776Z  • Installing StorageClass 💾  ...
+kind-e2e	Kind e2e	2026-07-07T20:12:20.2913248Z  ✓ Installing StorageClass 💾
+kind-e2e	Kind e2e	2026-07-07T20:12:20.3237080Z  • Waiting ≤ 2m0s for control-plane = Ready ⏳  ...
+kind-e2e	Kind e2e	2026-07-07T20:12:39.0468584Z  ✓ Waiting ≤ 2m0s for control-plane = Ready ⏳
+kind-e2e	Kind e2e	2026-07-07T20:12:39.0479318Z  • Ready after 19s 💚
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2220656Z Set kubectl context to "kind-opi-nvidia-e2e"
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2221303Z === Installing DPF + OPI stand-in CRDs ===
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2222627Z You can now use your cluster with:
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2226350Z 
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2227150Z kubectl cluster-info --context kind-opi-nvidia-e2e
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2228169Z 
+kind-e2e	Kind e2e	2026-07-07T20:12:39.2228702Z Have a nice day! 👋
+kind-e2e	Kind e2e	2026-07-07T20:12:39.3050249Z customresourcedefinition.apiextensions.k8s.io/dpuservices.svc.dpu.nvidia.com created
+kind-e2e	Kind e2e	2026-07-07T20:12:39.3194901Z customresourcedefinition.apiextensions.k8s.io/dpuservicechains.svc.dpu.nvidia.com created
+kind-e2e	Kind e2e	2026-07-07T20:12:39.3308270Z customresourcedefinition.apiextensions.k8s.io/dpuserviceinterfaces.svc.dpu.nvidia.com created
+kind-e2e	Kind e2e	2026-07-07T20:12:39.3452207Z customresourcedefinition.apiextensions.k8s.io/dpuserviceipams.svc.dpu.nvidia.com created
+kind-e2e	Kind e2e	2026-07-07T20:12:39.3572056Z customresourcedefinition.apiextensions.k8s.io/servicefunctionchains.opi.opiproject.org created
+kind-e2e	Kind e2e	2026-07-07T20:12:39.5855071Z === go test -tags e2e ===
+kind-e2e	Kind e2e	2026-07-07T20:12:39.6124581Z go: downloading google.golang.org/grpc v1.64.0
+kind-e2e	Kind e2e	2026-07-07T20:12:40.0912875Z go: downloading google.golang.org/protobuf v1.33.0
+kind-e2e	Kind e2e	2026-07-07T20:12:40.7547072Z go: downloading k8s.io/apimachinery v0.30.2
+kind-e2e	Kind e2e	2026-07-07T20:12:41.2493234Z go: downloading sigs.k8s.io/controller-runtime v0.18.5
+kind-e2e	Kind e2e	2026-07-07T20:12:41.2519450Z go: downloading gopkg.in/yaml.v3 v3.0.1
+kind-e2e	Kind e2e	2026-07-07T20:12:41.2775093Z go: downloading k8s.io/client-go v0.30.2
+kind-e2e	Kind e2e	2026-07-07T20:12:42.5855406Z go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240318140521-94a12d6c2237
+kind-e2e	Kind e2e	2026-07-07T20:12:42.5923466Z go: downloading golang.org/x/net v0.23.0
+kind-e2e	Kind e2e	2026-07-07T20:12:42.7450333Z go: downloading k8s.io/klog/v2 v2.120.1
+kind-e2e	Kind e2e	2026-07-07T20:12:42.7838148Z go: downloading github.com/gogo/protobuf v1.3.2
+kind-e2e	Kind e2e	2026-07-07T20:12:43.1340592Z go: downloading github.com/google/gofuzz v1.2.0
+kind-e2e	Kind e2e	2026-07-07T20:12:43.1349184Z go: downloading github.com/evanphx/json-patch/v5 v5.9.0
+kind-e2e	Kind e2e	2026-07-07T20:12:43.1532119Z go: downloading k8s.io/utils v0.0.0-20230726121419-3b25d923346b
+kind-e2e	Kind e2e	2026-07-07T20:12:43.1603251Z go: downloading k8s.io/api v0.30.2
+kind-e2e	Kind e2e	2026-07-07T20:12:43.6142062Z go: downloading k8s.io/apiextensions-apiserver v0.30.1
+kind-e2e	Kind e2e	2026-07-07T20:12:43.8126003Z go: downloading sigs.k8s.io/yaml v1.3.0
+kind-e2e	Kind e2e	2026-07-07T20:12:43.8132735Z go: downloading golang.org/x/sys v0.18.0
+kind-e2e	Kind e2e	2026-07-07T20:12:43.8255212Z go: downloading github.com/imdario/mergo v0.3.6
+kind-e2e	Kind e2e	2026-07-07T20:12:43.8409521Z go: downloading github.com/spf13/pflag v1.0.5
+kind-e2e	Kind e2e	2026-07-07T20:12:43.8686882Z go: downloading golang.org/x/term v0.18.0
+kind-e2e	Kind e2e	2026-07-07T20:12:43.9057155Z go: downloading sigs.k8s.io/structured-merge-diff/v4 v4.4.1
+kind-e2e	Kind e2e	2026-07-07T20:12:43.9709808Z go: downloading sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
+kind-e2e	Kind e2e	2026-07-07T20:12:43.9944645Z go: downloading github.com/go-logr/logr v1.4.1
+kind-e2e	Kind e2e	2026-07-07T20:12:44.0279816Z go: downloading gopkg.in/inf.v0 v0.9.1
+kind-e2e	Kind e2e	2026-07-07T20:12:44.0449760Z go: downloading k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
+kind-e2e	Kind e2e	2026-07-07T20:12:44.3204989Z go: downloading golang.org/x/oauth2 v0.18.0
+kind-e2e	Kind e2e	2026-07-07T20:12:44.3232553Z go: downloading golang.org/x/time v0.3.0
+kind-e2e	Kind e2e	2026-07-07T20:12:44.3321729Z go: downloading github.com/pkg/errors v0.9.1
+kind-e2e	Kind e2e	2026-07-07T20:12:44.3428016Z go: downloading gopkg.in/yaml.v2 v2.4.0
+kind-e2e	Kind e2e	2026-07-07T20:12:44.3724970Z go: downloading github.com/json-iterator/go v1.1.12
+kind-e2e	Kind e2e	2026-07-07T20:12:44.4026182Z go: downloading github.com/google/gnostic-models v0.6.8
+kind-e2e	Kind e2e	2026-07-07T20:12:44.4262986Z go: downloading github.com/go-openapi/jsonreference v0.20.2
+kind-e2e	Kind e2e	2026-07-07T20:12:44.4265453Z go: downloading github.com/go-openapi/swag v0.22.3
+kind-e2e	Kind e2e	2026-07-07T20:12:44.4373171Z go: downloading github.com/golang/protobuf v1.5.4
+kind-e2e	Kind e2e	2026-07-07T20:12:44.4539613Z go: downloading golang.org/x/text v0.14.0
+kind-e2e	Kind e2e	2026-07-07T20:12:44.9568000Z go: downloading github.com/davecgh/go-spew v1.1.1
+kind-e2e	Kind e2e	2026-07-07T20:12:44.9569537Z go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+kind-e2e	Kind e2e	2026-07-07T20:12:44.9679559Z go: downloading github.com/modern-go/reflect2 v1.0.2
+kind-e2e	Kind e2e	2026-07-07T20:12:44.9720160Z go: downloading github.com/go-openapi/jsonpointer v0.19.6
+kind-e2e	Kind e2e	2026-07-07T20:12:44.9832384Z go: downloading github.com/mailru/easyjson v0.7.7
+kind-e2e	Kind e2e	2026-07-07T20:12:45.0020451Z go: downloading github.com/josharian/intern v1.0.0
+kind-e2e	Kind e2e	2026-07-07T20:12:45.0031551Z go: downloading github.com/google/uuid v1.6.0
+kind-e2e	Kind e2e	2026-07-07T20:12:45.0110004Z go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+kind-e2e	Kind e2e	2026-07-07T20:12:45.0173132Z go: downloading github.com/emicklei/go-restful/v3 v3.11.0
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5099754Z === RUN   TestBF3LaneSpec_Complete
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5100490Z --- PASS: TestBF3LaneSpec_Complete (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5119607Z === RUN   TestE2EKindSFCGoldenApply
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5131078Z     e2e_kind_test.go:98: Kind e2e: golden contract 7 objects present in cluster
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5171946Z --- PASS: TestE2EKindSFCGoldenApply (0.44s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5189071Z === RUN   TestE2EKindTopologyBootstrap
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5249975Z     e2e_kind_test.go:114: Kind e2e bootstrap: API reachable; LCM preflight Absent as expected
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5255706Z --- PASS: TestE2EKindTopologyBootstrap (0.02s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5281103Z === RUN   TestDeterministicName_Stable
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5304475Z --- PASS: TestDeterministicName_Stable (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5313290Z === RUN   TestTranslateSFC_GoldenShape
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5314442Z --- PASS: TestTranslateSFC_GoldenShape (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5315526Z === RUN   TestTranslateSFC_MatchesGolden
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5316463Z --- PASS: TestTranslateSFC_MatchesGolden (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5317414Z === RUN   TestTranslateSFC_NoIPAMWhenUnset
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5318391Z --- PASS: TestTranslateSFC_NoIPAMWhenUnset (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5319844Z === RUN   TestApplyPlan_Idempotent
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5320777Z --- PASS: TestApplyPlan_Idempotent (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5321695Z === RUN   TestNextState_TruthTable
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5322538Z --- PASS: TestNextState_TruthTable (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5323362Z === RUN   TestInit_Contract
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5324137Z --- PASS: TestInit_Contract (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5324930Z === RUN   TestSetNumVfs_ShrinkGuard
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5325738Z --- PASS: TestSetNumVfs_ShrinkGuard (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5326575Z === RUN   TestSetNumVfs_Converges
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5327418Z --- PASS: TestSetNumVfs_Converges (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5328245Z === RUN   TestGetDevices_HealthFromDPU
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5329156Z --- PASS: TestGetDevices_HealthFromDPU (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5330064Z === RUN   TestCreateNF_UnavailableThenSuccess
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5331012Z --- PASS: TestCreateNF_UnavailableThenSuccess (0.06s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5332329Z === RUN   TestPing_HealthStaleness
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5333166Z --- PASS: TestPing_HealthStaleness (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5334014Z === RUN   TestSFCReconciler_ApplyThenReady
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5335024Z --- PASS: TestSFCReconciler_ApplyThenReady (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5335906Z === RUN   TestSFCReconciler_FinalizerGC
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5336819Z --- PASS: TestSFCReconciler_FinalizerGC (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5337740Z === RUN   TestBackoffAndFinalizers
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5338518Z --- PASS: TestBackoffAndFinalizers (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5339343Z === RUN   TestVersionCompatibilityController
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5340753Z --- PASS: TestVersionCompatibilityController (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5341860Z === RUN   TestForceCleanupChecker
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5342802Z --- PASS: TestForceCleanupChecker (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5343696Z === RUN   TestSimulatorContract_MatchesTranslateSFC
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5344680Z --- PASS: TestSimulatorContract_MatchesTranslateSFC (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5345659Z === RUN   TestSimulatorContract_MatchesGoldenYAML
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5346637Z --- PASS: TestSimulatorContract_MatchesGoldenYAML (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5347608Z === RUN   TestDPFBundle_NoPlaceholderDigests
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5348523Z --- PASS: TestDPFBundle_NoPlaceholderDigests (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5349630Z === RUN   TestDPFBundle_AlignedWithCompatibilityMatrix
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5350658Z --- PASS: TestDPFBundle_AlignedWithCompatibilityMatrix (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5351626Z PASS
+kind-e2e	Kind e2e	2026-07-07T20:14:02.5352434Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton	0.563s
+kind-e2e	Kind e2e	2026-07-07T20:14:05.4445068Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/api/vsp	[no test files]
+kind-e2e	Kind e2e	2026-07-07T20:14:05.4801148Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspclient	[no test files]
+kind-e2e	Kind e2e	2026-07-07T20:14:05.6080676Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspdaemon	[no test files]
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4301789Z === RUN   TestLiveSmoke_TCPRoundTrip
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4309181Z     live_smoke_test.go:80: live TCP demo OK on 127.0.0.1:45483
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4310484Z --- PASS: TestLiveSmoke_TCPRoundTrip (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4311475Z === RUN   TestVSPDaemon_GRPC_InitGetDevicesPing
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4312575Z --- PASS: TestVSPDaemon_GRPC_InitGetDevicesPing (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4313775Z === RUN   TestVSPDaemon_GRPC_CreateNetworkFunction
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4314887Z --- PASS: TestVSPDaemon_GRPC_CreateNetworkFunction (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4315986Z === RUN   TestVSPDaemon_GRPC_DpuModeUnimplemented
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4317000Z --- PASS: TestVSPDaemon_GRPC_DpuModeUnimplemented (0.00s)
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4317885Z PASS
+kind-e2e	Kind e2e	2026-07-07T20:14:06.4318739Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton/vspgrpc	0.018s
+kind-e2e	Kind e2e	2026-07-07T20:14:06.5821519Z 
+kind-e2e	Kind e2e	2026-07-07T20:14:06.5822253Z KIND E2E PASSED
+kind-e2e	Post Install Kind	﻿2026-07-07T20:14:07.6721670Z Post job cleanup.
+kind-e2e	Post Install Kind	2026-07-07T20:14:07.7170057Z Error response from daemon: No such container: kind-registry
+kind-e2e	Post Install Kind	2026-07-07T20:14:07.7321572Z Deleting cluster "chart-testing" ...
+kind-e2e	Post Run actions/setup-go@v5	﻿2026-07-07T20:14:07.7551683Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.7552907Z Post job cleanup.
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.8950492Z (node:14950) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.8959622Z (Use `node --trace-deprecation ...` to show where the warning was created)
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.9059756Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.9129918Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.9189492Z /home/runner/go/pkg/mod
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.9216753Z /home/runner/.cache/go-build
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:07.9560432Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof --files-from manifest.txt --use-compress-program zstdmt
+kind-e2e	Post Run actions/setup-go@v5	2026-07-07T20:14:10.3404633Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.22.12-8b7077075f06de90cd4beea1da2e2ca73835190f7e4b6a3cfd79bd7390ced5ab, another job may be creating this cache.
+kind-e2e	Post Run actions/checkout@v4	﻿2026-07-07T20:14:10.3695622Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.3696898Z Post job cleanup.
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4597885Z [command]/usr/bin/git version
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4640420Z git version 2.54.0
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4691979Z Temporarily overriding HOME='/home/runner/work/_temp/bf813097-5522-414e-9b36-7719c334de9c' before making global git config changes
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4698646Z Adding repository directory to the temporary git global config as a safe directory
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4717008Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4779768Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.4830338Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.5173360Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.5200917Z http.https://github.com/.extraheader
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.5216708Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.5251270Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.5524625Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+kind-e2e	Post Run actions/checkout@v4	2026-07-07T20:14:10.5561169Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+kind-e2e	Complete job	﻿2026-07-07T20:14:10.5927715Z Cleaning up orphan processes
+kind-e2e	Complete job	2026-07-07T20:14:10.6261242Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration	Set up job	﻿2026-07-07T20:11:40.1680382Z Current runner version: '2.335.1'
+integration	Set up job	2026-07-07T20:11:40.1768350Z ##[group]Runner Image Provisioner
+integration	Set up job	2026-07-07T20:11:40.1769610Z Hosted Compute Agent
+integration	Set up job	2026-07-07T20:11:40.1770500Z Version: 20260624.560
+integration	Set up job	2026-07-07T20:11:40.1772016Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+integration	Set up job	2026-07-07T20:11:40.1773206Z Build Date: 2026-06-24T18:26:47Z
+integration	Set up job	2026-07-07T20:11:40.1774280Z Worker ID: {63619c06-5820-4f3c-9500-9afc1742f727}
+integration	Set up job	2026-07-07T20:11:40.1775413Z Azure Region: westcentralus
+integration	Set up job	2026-07-07T20:11:40.1776408Z ##[endgroup]
+integration	Set up job	2026-07-07T20:11:40.1778826Z ##[group]Operating System
+integration	Set up job	2026-07-07T20:11:40.1779871Z Ubuntu
+integration	Set up job	2026-07-07T20:11:40.1780642Z 24.04.4
+integration	Set up job	2026-07-07T20:11:40.1802199Z LTS
+integration	Set up job	2026-07-07T20:11:40.1802986Z ##[endgroup]
+integration	Set up job	2026-07-07T20:11:40.1803922Z ##[group]Runner Image
+integration	Set up job	2026-07-07T20:11:40.1804859Z Image: ubuntu-24.04
+integration	Set up job	2026-07-07T20:11:40.1805705Z Version: 20260628.225.1
+integration	Set up job	2026-07-07T20:11:40.1807470Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260628.225/images/ubuntu/Ubuntu2404-Readme.md
+integration	Set up job	2026-07-07T20:11:40.1810327Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260628.225
+integration	Set up job	2026-07-07T20:11:40.1812316Z ##[endgroup]
+integration	Set up job	2026-07-07T20:11:40.1814056Z ##[group]GITHUB_TOKEN Permissions
+integration	Set up job	2026-07-07T20:11:40.1816443Z Contents: read
+integration	Set up job	2026-07-07T20:11:40.1817425Z Metadata: read
+integration	Set up job	2026-07-07T20:11:40.1818400Z Packages: read
+integration	Set up job	2026-07-07T20:11:40.1819182Z ##[endgroup]
+integration	Set up job	2026-07-07T20:11:40.1852453Z Secret source: Actions
+integration	Set up job	2026-07-07T20:11:40.1853752Z Prepare workflow directory
+integration	Set up job	2026-07-07T20:11:40.2836200Z Prepare all required actions
+integration	Set up job	2026-07-07T20:11:40.2954928Z Getting action download info
+integration	Set up job	2026-07-07T20:11:40.7634529Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+integration	Set up job	2026-07-07T20:11:41.1516595Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+integration	Set up job	2026-07-07T20:11:42.0150217Z Complete job name: integration
+integration	Run actions/checkout@v4	﻿2026-07-07T20:11:42.0883390Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0892922Z ##[group]Run actions/checkout@v4
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0893749Z with:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0894321Z   repository: Aditya-Sarna/opi-assignment1-ci-proof
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0898709Z   token: ***
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0899190Z   ssh-strict: true
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0899671Z   ssh-user: git
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0900167Z   persist-credentials: true
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0900934Z   clean: true
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0901446Z   sparse-checkout-cone-mode: true
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0902024Z   fetch-depth: 1
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0902496Z   fetch-tags: false
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0902983Z   show-progress: true
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0903473Z   lfs: false
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0903946Z   submodules: false
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0904498Z   set-safe-directory: true
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.0905341Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2105674Z Syncing repository: Aditya-Sarna/opi-assignment1-ci-proof
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2108732Z ##[group]Getting Git version info
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2110581Z Working directory is '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2132587Z [command]/usr/bin/git version
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2133760Z git version 2.54.0
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2140410Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2158337Z Temporarily overriding HOME='/home/runner/work/_temp/303ec75d-3c0b-49f6-9e5e-0817dd2f4472' before making global git config changes
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2162077Z Adding repository directory to the temporary git global config as a safe directory
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2166891Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2228604Z Deleting the contents of '/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof'
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2231349Z ##[group]Initializing the repository
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2232819Z [command]/usr/bin/git init /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2391252Z hint: Using 'master' as the name for the initial branch. This default branch name
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2393176Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2395003Z hint: to use in all of your new repositories, which will suppress this warning,
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2399259Z hint: call:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2407642Z hint:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2412643Z hint: 	git config --global init.defaultBranch <name>
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2414468Z hint:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2416633Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2419042Z hint: 'development'. The just-created branch can be renamed via this command:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2421969Z hint:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2423274Z hint: 	git branch -m <name>
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2425105Z hint:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2427154Z hint: Disable this message with "git config set advice.defaultBranchName false"
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2431207Z Initialized empty Git repository in /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/.git/
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2437183Z [command]/usr/bin/git remote add origin https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2500019Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2501678Z ##[group]Disabling automatic garbage collection
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2508304Z [command]/usr/bin/git config --local gc.auto 0
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2547076Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2548943Z ##[group]Setting up auth
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.2552177Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3501831Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3508862Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3516481Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3524009Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3530033Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3771616Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3801096Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3803421Z ##[group]Fetching the repository
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.3812334Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +de0bbd6a7b957a7fc01903028f32af6d27dfb651:refs/remotes/origin/main
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9551627Z From https://github.com/Aditya-Sarna/opi-assignment1-ci-proof
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9572967Z  * [new ref]         de0bbd6a7b957a7fc01903028f32af6d27dfb651 -> origin/main
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9578698Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9581266Z ##[group]Determining the checkout info
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9584185Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9585703Z [command]/usr/bin/git sparse-checkout disable
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9628214Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9664501Z ##[group]Checking out the ref
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9667135Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9770039Z Switched to a new branch 'main'
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9776440Z branch 'main' set up to track 'origin/main'.
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9782609Z ##[endgroup]
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9825903Z [command]/usr/bin/git log -1 --format=%H
+integration	Run actions/checkout@v4	2026-07-07T20:11:42.9850186Z de0bbd6a7b957a7fc01903028f32af6d27dfb651
+integration	Run actions/setup-go@v5	﻿2026-07-07T20:11:43.0226556Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0233080Z ##[group]Run actions/setup-go@v5
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0234208Z with:
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0235028Z   go-version: 1.22
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0235957Z   check-latest: false
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0248270Z   token: ***
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0249263Z   cache: true
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.0250103Z ##[endgroup]
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.1750021Z Setup go version spec 1.22
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.1818372Z Attempting to download 1.22...
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.1939164Z (node:2026) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+integration	Run actions/setup-go@v5	2026-07-07T20:11:43.1946752Z (Use `node --trace-deprecation ...` to show where the warning was created)
+integration	Run actions/setup-go@v5	2026-07-07T20:11:44.1318159Z matching 1.22...
+integration	Run actions/setup-go@v5	2026-07-07T20:11:44.1445855Z Acquiring 1.22.12 from https://github.com/actions/go-versions/releases/download/1.22.12-13149489080/go-1.22.12-linux-x64.tar.gz
+integration	Run actions/setup-go@v5	2026-07-07T20:11:45.1495840Z Extracting Go...
+integration	Run actions/setup-go@v5	2026-07-07T20:11:45.1686601Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/1ac3932a-7e3d-47c6-970c-e95a97ae81b3 -f /home/runner/work/_temp/dc7227cc-de98-4058-bdb7-1e0c859e8d79
+integration	Run actions/setup-go@v5	2026-07-07T20:11:47.2012210Z Successfully extracted go to /home/runner/work/_temp/1ac3932a-7e3d-47c6-970c-e95a97ae81b3
+integration	Run actions/setup-go@v5	2026-07-07T20:11:47.2013116Z Adding to the cache ...
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2240351Z Successfully cached go to /opt/hostedtoolcache/go/1.22.12/x64
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2243459Z Added go to the path
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2246462Z Successfully set up Go version 1.22
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2512893Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2555223Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2599563Z /home/runner/go/pkg/mod
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.2617524Z /home/runner/.cache/go-build
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.4803919Z Cache is not found
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.4828589Z go version go1.22.12 linux/amd64
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.4829252Z 
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.4830176Z ##[group]go env
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6110079Z GO111MODULE=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6111367Z GOARCH='amd64'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6113749Z GOBIN=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6114182Z GOCACHE='/home/runner/.cache/go-build'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6114739Z GOENV='/home/runner/.config/go/env'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6115186Z GOEXE=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6115492Z GOEXPERIMENT=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6115816Z GOFLAGS=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6116128Z GOHOSTARCH='amd64'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6116462Z GOHOSTOS='linux'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6116779Z GOINSECURE=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6117152Z GOMODCACHE='/home/runner/go/pkg/mod'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6117630Z GONOPROXY=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6117957Z GONOSUMDB=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6118346Z GOOS='linux'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6118690Z GOPATH='/home/runner/go'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6119062Z GOPRIVATE=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6119565Z GOPROXY='https://proxy.golang.org,direct'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6120226Z GOROOT='/opt/hostedtoolcache/go/1.22.12/x64'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6121011Z GOSUMDB='sum.golang.org'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6121424Z GOTMPDIR=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6121754Z GOTOOLCHAIN='auto'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6122296Z GOTOOLDIR='/opt/hostedtoolcache/go/1.22.12/x64/pkg/tool/linux_amd64'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6122899Z GOVCS=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6123213Z GOVERSION='go1.22.12'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6123564Z GCCGO='gccgo'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6123877Z GOAMD64='v1'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6124178Z AR='ar'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6124447Z CC='gcc'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6124726Z CXX='g++'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6125014Z CGO_ENABLED='1'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6125609Z GOMOD='/home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof/go.mod'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6126263Z GOWORK=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6126876Z CGO_CFLAGS='-O2 -g'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6127452Z CGO_CPPFLAGS=''
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6127857Z CGO_CXXFLAGS='-O2 -g'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6128271Z CGO_FFLAGS='-O2 -g'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6128606Z CGO_LDFLAGS='-O2 -g'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6128971Z PKG_CONFIG='pkg-config'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6130176Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build1613773069=/tmp/go-build -gno-record-gcc-switches'
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6131504Z 
+integration	Run actions/setup-go@v5	2026-07-07T20:11:54.6132028Z ##[endgroup]
+integration	Integration (envtest)	﻿2026-07-07T20:11:54.6379889Z ##[group]Run chmod +x scripts/*.sh
+integration	Integration (envtest)	2026-07-07T20:11:54.6380284Z [36;1mchmod +x scripts/*.sh[0m
+integration	Integration (envtest)	2026-07-07T20:11:54.6381064Z [36;1mexport KUBEBUILDER_ASSETS="$(./scripts/fetch-envtest.sh)"[0m
+integration	Integration (envtest)	2026-07-07T20:11:54.6381609Z [36;1mCGO_ENABLED=0 go test -tags integration -count=1 -v ./...[0m
+integration	Integration (envtest)	2026-07-07T20:11:54.6528751Z shell: /usr/bin/bash -e {0}
+integration	Integration (envtest)	2026-07-07T20:11:54.6529057Z ##[endgroup]
+integration	Integration (envtest)	2026-07-07T20:11:54.6699887Z Downloading envtest v1.30.0 (linux/amd64) ...
+integration	Integration (envtest)	2026-07-07T20:11:56.6948817Z Installed envtest to .tools/envtest/1.30.0-linux-amd64
+integration	Integration (envtest)	2026-07-07T20:11:56.7467863Z go: downloading google.golang.org/grpc v1.64.0
+integration	Integration (envtest)	2026-07-07T20:11:57.2671999Z go: downloading google.golang.org/protobuf v1.33.0
+integration	Integration (envtest)	2026-07-07T20:11:57.5262546Z go: downloading k8s.io/apimachinery v0.30.2
+integration	Integration (envtest)	2026-07-07T20:11:57.6913304Z go: downloading sigs.k8s.io/controller-runtime v0.18.5
+integration	Integration (envtest)	2026-07-07T20:11:57.6934943Z go: downloading gopkg.in/yaml.v3 v3.0.1
+integration	Integration (envtest)	2026-07-07T20:11:57.7622080Z go: downloading k8s.io/client-go v0.30.2
+integration	Integration (envtest)	2026-07-07T20:11:57.8514326Z go: downloading golang.org/x/net v0.23.0
+integration	Integration (envtest)	2026-07-07T20:11:58.3691947Z go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240318140521-94a12d6c2237
+integration	Integration (envtest)	2026-07-07T20:11:58.4986244Z go: downloading github.com/gogo/protobuf v1.3.2
+integration	Integration (envtest)	2026-07-07T20:11:58.7935393Z go: downloading github.com/google/gofuzz v1.2.0
+integration	Integration (envtest)	2026-07-07T20:11:58.7936426Z go: downloading k8s.io/klog/v2 v2.120.1
+integration	Integration (envtest)	2026-07-07T20:11:58.8473640Z go: downloading github.com/evanphx/json-patch/v5 v5.9.0
+integration	Integration (envtest)	2026-07-07T20:11:58.8638735Z go: downloading k8s.io/api v0.30.2
+integration	Integration (envtest)	2026-07-07T20:11:59.2479580Z go: downloading k8s.io/apiextensions-apiserver v0.30.1
+integration	Integration (envtest)	2026-07-07T20:11:59.3948422Z go: downloading k8s.io/utils v0.0.0-20230726121419-3b25d923346b
+integration	Integration (envtest)	2026-07-07T20:11:59.3949577Z go: downloading sigs.k8s.io/yaml v1.3.0
+integration	Integration (envtest)	2026-07-07T20:11:59.4507481Z go: downloading golang.org/x/sys v0.18.0
+integration	Integration (envtest)	2026-07-07T20:11:59.5061627Z go: downloading gopkg.in/inf.v0 v0.9.1
+integration	Integration (envtest)	2026-07-07T20:11:59.5660874Z go: downloading sigs.k8s.io/structured-merge-diff/v4 v4.4.1
+integration	Integration (envtest)	2026-07-07T20:11:59.6631748Z go: downloading sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
+integration	Integration (envtest)	2026-07-07T20:11:59.6810495Z go: downloading github.com/go-logr/logr v1.4.1
+integration	Integration (envtest)	2026-07-07T20:11:59.7260968Z go: downloading k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
+integration	Integration (envtest)	2026-07-07T20:11:59.9261757Z go: downloading github.com/pkg/errors v0.9.1
+integration	Integration (envtest)	2026-07-07T20:11:59.9293255Z go: downloading gopkg.in/yaml.v2 v2.4.0
+integration	Integration (envtest)	2026-07-07T20:11:59.9897810Z go: downloading golang.org/x/term v0.18.0
+integration	Integration (envtest)	2026-07-07T20:11:59.9901802Z go: downloading golang.org/x/oauth2 v0.18.0
+integration	Integration (envtest)	2026-07-07T20:12:00.1373447Z go: downloading golang.org/x/time v0.3.0
+integration	Integration (envtest)	2026-07-07T20:12:00.1454183Z go: downloading github.com/json-iterator/go v1.1.12
+integration	Integration (envtest)	2026-07-07T20:12:00.2179371Z go: downloading github.com/google/gnostic-models v0.6.8
+integration	Integration (envtest)	2026-07-07T20:12:00.2825462Z go: downloading github.com/go-openapi/jsonreference v0.20.2
+integration	Integration (envtest)	2026-07-07T20:12:00.2893222Z go: downloading github.com/go-openapi/swag v0.22.3
+integration	Integration (envtest)	2026-07-07T20:12:00.3360898Z go: downloading github.com/golang/protobuf v1.5.4
+integration	Integration (envtest)	2026-07-07T20:12:00.3461496Z go: downloading github.com/imdario/mergo v0.3.6
+integration	Integration (envtest)	2026-07-07T20:12:00.3998042Z go: downloading github.com/spf13/pflag v1.0.5
+integration	Integration (envtest)	2026-07-07T20:12:00.4161372Z go: downloading golang.org/x/text v0.14.0
+integration	Integration (envtest)	2026-07-07T20:12:00.9539082Z go: downloading github.com/davecgh/go-spew v1.1.1
+integration	Integration (envtest)	2026-07-07T20:12:00.9542177Z go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+integration	Integration (envtest)	2026-07-07T20:12:01.0088431Z go: downloading github.com/modern-go/reflect2 v1.0.2
+integration	Integration (envtest)	2026-07-07T20:12:01.0118445Z go: downloading github.com/go-openapi/jsonpointer v0.19.6
+integration	Integration (envtest)	2026-07-07T20:12:01.0661331Z go: downloading github.com/mailru/easyjson v0.7.7
+integration	Integration (envtest)	2026-07-07T20:12:01.1296372Z go: downloading github.com/josharian/intern v1.0.0
+integration	Integration (envtest)	2026-07-07T20:12:01.1302140Z go: downloading github.com/google/uuid v1.6.0
+integration	Integration (envtest)	2026-07-07T20:12:01.1811662Z go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+integration	Integration (envtest)	2026-07-07T20:12:01.1878355Z go: downloading github.com/emicklei/go-restful/v3 v3.11.0
+integration	Integration (envtest)	2026-07-07T20:13:17.1783101Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/api/vsp	[no test files]
+integration	Integration (envtest)	2026-07-07T20:13:17.2292084Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspclient	[no test files]
+integration	Integration (envtest)	2026-07-07T20:13:17.3988928Z ?   	github.com/adityasarna/opi-nvidia-vsp-skeleton/cmd/vspdaemon	[no test files]
+integration	Integration (envtest)	2026-07-07T20:13:19.6817899Z === RUN   TestBF3LaneSpec_Complete
+integration	Integration (envtest)	2026-07-07T20:13:19.6831625Z --- PASS: TestBF3LaneSpec_Complete (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6841880Z === RUN   TestDeterministicName_Stable
+integration	Integration (envtest)	2026-07-07T20:13:19.6842641Z --- PASS: TestDeterministicName_Stable (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6843513Z === RUN   TestTranslateSFC_GoldenShape
+integration	Integration (envtest)	2026-07-07T20:13:19.6844388Z --- PASS: TestTranslateSFC_GoldenShape (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6845375Z === RUN   TestTranslateSFC_MatchesGolden
+integration	Integration (envtest)	2026-07-07T20:13:19.6846218Z --- PASS: TestTranslateSFC_MatchesGolden (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6846998Z === RUN   TestTranslateSFC_NoIPAMWhenUnset
+integration	Integration (envtest)	2026-07-07T20:13:19.6847757Z --- PASS: TestTranslateSFC_NoIPAMWhenUnset (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6848536Z === RUN   TestApplyPlan_Idempotent
+integration	Integration (envtest)	2026-07-07T20:13:19.6849236Z --- PASS: TestApplyPlan_Idempotent (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6849956Z === RUN   TestNextState_TruthTable
+integration	Integration (envtest)	2026-07-07T20:13:19.6850639Z --- PASS: TestNextState_TruthTable (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6851566Z === RUN   TestInit_Contract
+integration	Integration (envtest)	2026-07-07T20:13:19.6852205Z --- PASS: TestInit_Contract (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6853057Z === RUN   TestSetNumVfs_ShrinkGuard
+integration	Integration (envtest)	2026-07-07T20:13:19.6853862Z --- PASS: TestSetNumVfs_ShrinkGuard (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6854582Z === RUN   TestSetNumVfs_Converges
+integration	Integration (envtest)	2026-07-07T20:13:19.6855260Z --- PASS: TestSetNumVfs_Converges (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6855988Z === RUN   TestGetDevices_HealthFromDPU
+integration	Integration (envtest)	2026-07-07T20:13:19.6856713Z --- PASS: TestGetDevices_HealthFromDPU (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6857474Z === RUN   TestCreateNF_UnavailableThenSuccess
+integration	Integration (envtest)	2026-07-07T20:13:19.6858257Z --- PASS: TestCreateNF_UnavailableThenSuccess (0.06s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6859041Z === RUN   TestPing_HealthStaleness
+integration	Integration (envtest)	2026-07-07T20:13:19.6859729Z --- PASS: TestPing_HealthStaleness (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6860449Z === RUN   TestSFCReconciler_ApplyThenReady
+integration	Integration (envtest)	2026-07-07T20:13:19.6861512Z --- PASS: TestSFCReconciler_ApplyThenReady (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6862283Z === RUN   TestSFCReconciler_FinalizerGC
+integration	Integration (envtest)	2026-07-07T20:13:19.6863012Z --- PASS: TestSFCReconciler_FinalizerGC (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6863744Z === RUN   TestBackoffAndFinalizers
+integration	Integration (envtest)	2026-07-07T20:13:19.6864448Z --- PASS: TestBackoffAndFinalizers (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6865201Z === RUN   TestVersionCompatibilityController
+integration	Integration (envtest)	2026-07-07T20:13:19.6866008Z --- PASS: TestVersionCompatibilityController (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6866785Z === RUN   TestForceCleanupChecker
+integration	Integration (envtest)	2026-07-07T20:13:19.6867726Z --- PASS: TestForceCleanupChecker (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6868561Z === RUN   TestIntegrationTranslateApplyAndReady
+integration	Integration (envtest)	2026-07-07T20:13:19.6870170Z     integration_test.go:113: integration: 7 derived objects applied; ChainProgrammed after DPF Ready
+integration	Integration (envtest)	2026-07-07T20:13:19.6871737Z --- PASS: TestIntegrationTranslateApplyAndReady (2.10s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6872611Z === RUN   TestIntegrationDriftCorrectionViaSSA
+integration	Integration (envtest)	2026-07-07T20:13:19.6873893Z     integration_test.go:153: drift correction confirmed via SSA field manager "opi-nvidia-vsp"
+integration	Integration (envtest)	2026-07-07T20:13:19.6875013Z --- PASS: TestIntegrationDriftCorrectionViaSSA (0.08s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6875832Z === RUN   TestIntegrationFinalizerTeardown
+integration	Integration (envtest)	2026-07-07T20:13:19.6877263Z     integration_test.go:182: finalizer teardown confirmed: derived objects removed
+integration	Integration (envtest)	2026-07-07T20:13:19.6878277Z --- PASS: TestIntegrationFinalizerTeardown (0.07s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6879101Z === RUN   TestSimulatorContract_MatchesTranslateSFC
+integration	Integration (envtest)	2026-07-07T20:13:19.6879962Z --- PASS: TestSimulatorContract_MatchesTranslateSFC (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6881141Z === RUN   TestSimulatorContract_MatchesGoldenYAML
+integration	Integration (envtest)	2026-07-07T20:13:19.6882071Z --- PASS: TestSimulatorContract_MatchesGoldenYAML (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6882898Z === RUN   TestDPFBundle_NoPlaceholderDigests
+integration	Integration (envtest)	2026-07-07T20:13:19.6883960Z --- PASS: TestDPFBundle_NoPlaceholderDigests (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6884794Z === RUN   TestDPFBundle_AlignedWithCompatibilityMatrix
+integration	Integration (envtest)	2026-07-07T20:13:19.6885704Z --- PASS: TestDPFBundle_AlignedWithCompatibilityMatrix (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6886485Z PASS
+integration	Integration (envtest)	2026-07-07T20:13:19.6887140Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton	6.855s
+integration	Integration (envtest)	2026-07-07T20:13:19.6887986Z === RUN   TestLiveSmoke_TCPRoundTrip
+integration	Integration (envtest)	2026-07-07T20:13:19.6888931Z     live_smoke_test.go:80: live TCP demo OK on 127.0.0.1:37629
+integration	Integration (envtest)	2026-07-07T20:13:19.6889768Z --- PASS: TestLiveSmoke_TCPRoundTrip (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6890523Z === RUN   TestVSPDaemon_GRPC_InitGetDevicesPing
+integration	Integration (envtest)	2026-07-07T20:13:19.6891618Z --- PASS: TestVSPDaemon_GRPC_InitGetDevicesPing (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6892466Z === RUN   TestVSPDaemon_GRPC_CreateNetworkFunction
+integration	Integration (envtest)	2026-07-07T20:13:19.6893318Z --- PASS: TestVSPDaemon_GRPC_CreateNetworkFunction (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6894428Z === RUN   TestVSPDaemon_GRPC_DpuModeUnimplemented
+integration	Integration (envtest)	2026-07-07T20:13:19.6895282Z --- PASS: TestVSPDaemon_GRPC_DpuModeUnimplemented (0.00s)
+integration	Integration (envtest)	2026-07-07T20:13:19.6896028Z PASS
+integration	Integration (envtest)	2026-07-07T20:13:19.6896766Z ok  	github.com/adityasarna/opi-nvidia-vsp-skeleton/vspgrpc	0.017s
+integration	Post Run actions/setup-go@v5	﻿2026-07-07T20:13:19.8486364Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.8487663Z Post job cleanup.
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.9740324Z (node:6683) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.9742328Z (Use `node --trace-deprecation ...` to show where the warning was created)
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.9826696Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOMODCACHE
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.9885184Z [command]/opt/hostedtoolcache/go/1.22.12/x64/bin/go env GOCACHE
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.9906859Z /home/runner/go/pkg/mod
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:19.9930373Z /home/runner/.cache/go-build
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:20.0172688Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof --files-from manifest.txt --use-compress-program zstdmt
+integration	Post Run actions/setup-go@v5	2026-07-07T20:13:22.4294083Z Failed to save: Unable to reserve cache with key setup-go-Linux-x64-ubuntu24-go-1.22.12-8b7077075f06de90cd4beea1da2e2ca73835190f7e4b6a3cfd79bd7390ced5ab, another job may be creating this cache.
+integration	Post Run actions/checkout@v4	﻿2026-07-07T20:13:22.4563130Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.4564425Z Post job cleanup.
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5493494Z [command]/usr/bin/git version
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5538032Z git version 2.54.0
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5616271Z Temporarily overriding HOME='/home/runner/work/_temp/712b7305-628b-4192-8b68-bedcec29d5ec' before making global git config changes
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5619677Z Adding repository directory to the temporary git global config as a safe directory
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5624409Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opi-assignment1-ci-proof/opi-assignment1-ci-proof
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5671516Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5715112Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5963498Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.5991436Z http.https://github.com/.extraheader
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.6005704Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.6042209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.6277213Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration	Post Run actions/checkout@v4	2026-07-07T20:13:22.6310013Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration	Complete job	﻿2026-07-07T20:13:22.6759666Z Cleaning up orphan processes
+integration	Complete job	2026-07-07T20:13:22.7142946Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

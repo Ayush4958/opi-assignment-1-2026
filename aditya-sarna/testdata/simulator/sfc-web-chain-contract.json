@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "scenarioId": "sfc-web-chain-v1",
+  "simulatorUrl": "https://dpu-architect.lovable.app",
+  "simulatorPath": "/scenarios/sfc-web-chain",
+  "description": "Normative object graph for sampleSFC() — must match testdata/golden/sfc-web-chain.yaml and TranslateSFC() output.",
+  "input": {
+    "ownerKind": "ServiceFunctionChain",
+    "namespace": "tenant-a",
+    "name": "web-chain",
+    "networkFunctions": [
+      {"name": "firewall", "image": "example.com/fw:1"},
+      {"name": "router", "image": "example.com/rtr:1"}
+    ],
+    "ipamSubnet": "10.0.0.0/24",
+    "nodeSelector": {"dpu": "true"}
+  },
+  "managedNamespace": "opi-nvidia-system",
+  "topologyModes": ["DPFNative", "OPIConverged"],
+  "expectedObjects": [
+    {
+      "kind": "DPUService",
+      "name": "opi-f1cf853c-web-chain",
+      "specKeys": ["helmChart", "values", "deployInCluster", "argoPruneEnabled"],
+      "specAssertions": {"helmChart": "opi-nf-wrapper"}
+    },
+    {
+      "kind": "DPUServiceChain",
+      "name": "opi-ae0ff21b-web-chain",
+      "specKeys": ["hops", "nodeSelector"]
+    },
+    {
+      "kind": "DPUServiceInterface",
+      "name": "opi-8bd6b935-web-chain",
+      "specAssertions": {"service": "firewall", "direction": "in"}
+    },
+    {
+      "kind": "DPUServiceInterface",
+      "name": "opi-615109e6-web-chain",
+      "specAssertions": {"service": "firewall", "direction": "out"}
+    },
+    {
+      "kind": "DPUServiceInterface",
+      "name": "opi-3c256f51-web-chain",
+      "specAssertions": {"service": "router", "direction": "in"}
+    },
+    {
+      "kind": "DPUServiceInterface",
+      "name": "opi-0afdb2fe-web-chain",
+      "specAssertions": {"service": "router", "direction": "out"}
+    },
+    {
+      "kind": "DPUServiceIPAM",
+      "name": "opi-a18a1405-web-chain",
+      "specAssertions": {"subnet": "10.0.0.0/24"}
+    }
+  ],
+  "ownershipLabels": [
+    "opi.opiproject.org/owner-kind",
+    "opi.opiproject.org/owner-namespace",
+    "opi.opiproject.org/owner-name",
+    "opi.opiproject.org/component"
+  ]
+}

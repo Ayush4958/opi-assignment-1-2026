@@ -1,0 +1,31 @@
+{{- range .Values.networkFunctions }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .name | lower | replace "_" "-" }}
+  labels:
+    app.kubernetes.io/name: {{ .name | lower | replace "_" "-" }}
+    app.kubernetes.io/component: opi-nf-wrapper
+    opi.opiproject.org/nf-name: {{ .name | quote }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ .name | lower | replace "_" "-" }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ .name | lower | replace "_" "-" }}
+        opi.opiproject.org/nf-name: {{ .name | quote }}
+    spec:
+      {{- with $.Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: nf
+          image: {{ .image | quote }}
+          resources:
+            {{- toYaml $.Values.resources | nindent 12 }}
+{{- end }}

@@ -1,0 +1,48 @@
+# BF-3 hardware e2e lane contract (§13.1 compatibility.yaml bf3-hardware-v1).
+# Executed by scripts/e2e-bf3-hardware.sh when BF3_LAB=1 and lab nodes are reachable.
+# Assignment 1: lane spec + contract gate; full run requires BlueField-3 lab access.
+
+apiVersion: opi.opiproject.org/v1alpha1
+kind: HardwareE2ELane
+metadata:
+  name: bf3-hardware-v1
+  labels:
+    component: nvidia-vsp
+    profile: ga
+spec:
+  hardware:
+    platform: BlueField-3
+    pciVendor: "15b3"
+    minNodes: 1
+  topologyModes:
+    - DPFNative
+    - OPIConverged
+  phases:
+    - id: provision
+      description: DPUSet provisions DPU via DMS; DPU Ready
+      gates:
+        - condition: DPUReady
+          on: provisioning.dpu.nvidia.com/v1alpha1/DPU
+    - id: vf-actuation
+      description: SetNumVfs via VSP; hostnetwork converges VF count
+      gates:
+        - condition: VFCountMatched
+    - id: sfc-declarative
+      description: ServiceFunctionChain translated; ChainProgrammed True
+      gates:
+        - condition: ChainProgrammed
+          on: opi.opiproject.org/v1alpha1/ServiceFunctionChain
+    - id: traffic
+      description: Pod with DPU VF sends TCP through SFC chain
+      gates:
+        - metric: opi_nvidia_vsp_sfc_traffic_ok
+          value: "1"
+    - id: teardown
+      description: SFC delete leaves zero orphan DPF objects
+      gates:
+        - condition: ZeroOrphans
+          selector: opi.opiproject.org/component=nvidia-vsp
+  ci:
+    workflow: .github/workflows/verify.yml
+    job: bf3-lane-contract
+    hardwareJob: bf3-hardware-e2e

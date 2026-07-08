@@ -1,0 +1,5 @@
+# Local toolchain (not part of submission bundle)
+.tools/
+# Generated transcript backup — submit llm_transcript.json only
+llm_transcript.generated.json
+.transcript_gen.json
